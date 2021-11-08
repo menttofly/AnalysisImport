@@ -12,15 +12,24 @@ class DependencyAnalyzer:
     """
     def __init__(self, path: str):
         # [pod: dependencies]  res_dict
-        self.__module_dependencies = {}
+        self.__dependencies = {}
         self.lock_file = os.path.expanduser(path)
     
+
     @property
-    def pods(self):
+    def all_pods(self):
         """
         返回当前所有的组件库
         """
-        return self.__module_dependencies
+        return self.__dependencies.keys()
+
+    
+    def fetch_dependencies(self, pod: str) -> set[str]:
+        """
+        获取某个组件的直接、间接依赖
+        """
+        return self.__dependencies.get(pod)
+
 
     def analyze(self):
         """
@@ -79,7 +88,7 @@ class DependencyAnalyzer:
         深度优先遍历所有路径，取得 vertex 所有直接、间接依赖
         """
         # 已经计算过的 vertex 依赖项
-        if counted := self.__all_dependencies.get(vertex):
+        if counted := self.__dependencies.get(vertex):
             res = set(counted); res.add(vertex)
             dependencies.update(res)
             return
@@ -118,4 +127,4 @@ class DependencyAnalyzer:
                 res[vertex] = set() 
             res[vertex].update(set(dependencies)) 
         
-        self.__module_dependencies = res
+        self.__dependencies = res
