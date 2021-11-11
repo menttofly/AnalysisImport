@@ -11,20 +11,20 @@ class DependencyAnalyzer:
     解析 Podfile.lock 文件，获取所有组件及其直接、间接依赖
     """
     def __init__(self, path: str):
-        # [pod: dependencies]  res_dict
+        # {pod => dependencies} 
         self.__dependencies = {}
         self.lock_file = os.path.expanduser(path)
     
 
     @property
-    def all_pods(self):
+    def pods(self):
         """
         返回当前所有的组件库
         """
         return self.__dependencies.keys()
 
     
-    def fetch_dependencies(self, pod: str) -> set[str]:
+    def dependencies(self, pod: str) -> set[str]:
         """
         获取某个组件的直接、间接依赖
         """
