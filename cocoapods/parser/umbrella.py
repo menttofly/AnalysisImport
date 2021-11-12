@@ -13,7 +13,6 @@ class Umbrella:
         self.__umbrella_file = os.path.expanduser(path)
         pass
 
-
     @property
     def module(self):
         """
@@ -22,7 +21,6 @@ class Umbrella:
         return os.path.basename(
             os.path.dirname(self.__umbrella_file)
         )
-
 
     def parse(self):
         """

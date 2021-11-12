@@ -15,7 +15,6 @@ class HeadersStore:
         self.headers_mapping = {}
         self.__parse_headers(os.path.expanduser(path))
 
-    
     def __parse_headers(self, header_root):
         """
         解析 Headers 下所有头文件
@@ -35,7 +34,6 @@ class HeadersStore:
 
         print("")
 
-    
     def fetch_pod_headers(self, header_dir: str) -> tuple[set, dict]:
         """
         获取指定组件下的所有 .h 文件相对路径

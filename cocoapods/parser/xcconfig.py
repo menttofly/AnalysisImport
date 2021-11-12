@@ -13,7 +13,6 @@ class Xcconfig:
         self.raw_configs = {}
         self.__config_file = os.path.expanduser(path)
 
-
     @property
     def modulemaps(self) -> set[str]:
         """
@@ -26,7 +25,6 @@ class Xcconfig:
         return [
             os.path.basename(x[1]).splitext[0] for x in map_files
         ]
-
 
     def parse(self) -> dict[str: str]:
         """

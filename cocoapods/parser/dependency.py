@@ -14,7 +14,6 @@ class Dependency:
         # {pod => dependencies} 
         self.__dependencies = {}
         self.__lock_file = os.path.expanduser(path)
-    
 
     @property
     def pods(self):
@@ -23,13 +22,11 @@ class Dependency:
         """
         return self.__dependencies.keys()
 
-    
     def dependencies(self, pod: str) -> set[str]:
         """
         获取某个组件的直接、间接依赖
         """
         return self.__dependencies.get(pod)
-
 
     def analyze(self):
         """
@@ -53,7 +50,6 @@ class Dependency:
             f"{os.path.basename(self.__lock_file)} 依赖分析耗时: {(datetime.now() - begin).total_seconds()}s"
         )
         
-
     def __parse_lock_file(self) -> dict:
         """
         解析 Podfile.lock，创建邻接表用于表示依赖关系
@@ -83,7 +79,6 @@ class Dependency:
 
         return graph
 
-
     def __dfs(self, vertex: str, path: list[str], dependencies: set[str]):
         """
         深度优先遍历所有路径，取得 vertex 所有直接、间接依赖
@@ -107,7 +102,6 @@ class Dependency:
 
         path.pop()
 
-    
     def __purge_subspecs(self):
         """
         合并所有 subspecs 依赖
