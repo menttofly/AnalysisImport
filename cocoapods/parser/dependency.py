@@ -6,14 +6,14 @@ __author__ = "zhengqi"
 import os, re
 from datetime import datetime
 
-class DependencyAnalyzer:
+class Dependency:
     """
     解析 Podfile.lock 文件，获取所有组件及其直接、间接依赖
     """
-    def __init__(self, path: str):
+    def __init__(self, path: str) -> None:
         # {pod => dependencies} 
         self.__dependencies = {}
-        self.lock_file = os.path.expanduser(path)
+        self.__lock_file = os.path.expanduser(path)
     
 
     @property
@@ -36,34 +36,35 @@ class DependencyAnalyzer:
         主函数
         """
         begin = datetime.now()
-        self.graph = self.parse_lock_file()
+        self.graph = self.__parse_lock_file()
         
         # 遍历所有顶点
         for vertex, _ in self.graph.items():
             res = set()
-            self.dfs(vertex, [], res); 
+            self.__dfs(vertex, [], res); 
             res.remove(vertex) if vertex in res else None
             
             # 保存组件依赖关系
-            self.__all_dependencies[vertex] = res
+            self.__dependencies[vertex] = res
 
         # 清洗结果，合并 subspecs
-        self.purge_subspecs_dependency()
+        self.__purge_subspecs()
+        print(
+            f"{os.path.basename(self.__lock_file)} 依赖分析耗时: {(datetime.now() - begin).total_seconds()}s"
+        )
         
-        print(f"{os.path.basename(self.lock_file)} 依赖分析耗时: {(datetime.now() - begin).total_seconds()}s")
 
-
-    def parse_lock_file(self) -> dict:
+    def __parse_lock_file(self) -> dict:
         """
         解析 Podfile.lock，创建邻接表用于表示依赖关系
         """
-        if not os.path.exists(self.lock_file):
-            raise Exception(f"{self.lock_file} 不存在!")
+        if not os.path.exists(self.__lock_file):
+            raise Exception(f"{self.__lock_file} 不存在!")
 
         # 邻接表
         graph = {}
         
-        with open(self.lock_file, "r") as file:
+        with open(self.__lock_file, "r") as file:
             res = re.match(r"PODS:\n([\s\S]+)\nDEPENDENCIES:", file.read())
             pre_adjacency = []
 
@@ -75,15 +76,15 @@ class DependencyAnalyzer:
                 adjacency = re.match(r"\s{4}-\s([\w\/\.-]+)\s*", line)
 
                 if vertex:
-                    graph[vertex.group(1)] = pre_adjacency
+                    graph[vertex[1]] = pre_adjacency
                     pre_adjacency = []
                 elif adjacency:
-                    pre_adjacency.append(adjacency.group(1))
+                    pre_adjacency.append(adjacency[1])
 
         return graph
 
 
-    def dfs(self, vertex: str, path: list[str], dependencies: set[str]):
+    def __dfs(self, vertex: str, path: list[str], dependencies: set[str]):
         """
         深度优先遍历所有路径，取得 vertex 所有直接、间接依赖
         """
@@ -102,17 +103,17 @@ class DependencyAnalyzer:
 
         # 遍历所有邻接顶点
         for adjacency in self.graph.get(vertex, []):
-            self.dfs(adjacency, path, dependencies)
+            self.__dfs(adjacency, path, dependencies)
 
         path.pop()
 
     
-    def purge_subspecs_dependency(self):
+    def __purge_subspecs(self):
         """
         合并所有 subspecs 依赖
         """
         res = {}
-        for vertex, dependencies in self.__all_dependencies.items():
+        for vertex, dependencies in self.__dependencies.items():
             vertex = vertex.split("/")[0]
             # 过滤 YYKit -> YYKit/no-arc 这种 subspecs 依赖声明
             dependencies = {

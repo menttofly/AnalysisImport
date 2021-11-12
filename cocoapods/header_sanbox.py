@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 # -*-coding:utf-8-*-
 
+__author__ = "zhengqi"
+
 import os
 
-class HeaderPaths:
+class HeadersStore:
     """
     获取 "${PODS_ROOT}/Headers/Public" 目录下所有的 .h 文件
     """
@@ -11,10 +13,10 @@ class HeaderPaths:
 
         self.header_paths = {}
         self.headers_mapping = {}
-        self.parse_all_headers(os.path.expanduser(path))
+        self.__parse_headers(os.path.expanduser(path))
 
     
-    def parse_all_headers(self, header_root):
+    def __parse_headers(self, header_root):
         """
         解析 Headers 下所有头文件
         """
