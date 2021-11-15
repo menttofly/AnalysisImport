@@ -4,53 +4,89 @@
 __author__ = "zhengqi"
 
 import os
+from lazy import lazy_property
+from dataclasses import dataclass
+from parser.umbrella import Umbrella
+from parser.xcconfig import Xcconfig
 
-class HeadersStore:
+@dataclass
+class Module:
     """
-    获取 "${PODS_ROOT}/Headers/Public" 目录下所有的 .h 文件
+    模块信息
     """
-    def __init__(self, path: str):
+    name: str 
+    modulemap_name: str
+    umbrella_imports: set[str]
 
-        self.header_paths = {}
-        self.headers_mapping = {}
-        self.__parse_headers(os.path.expanduser(path))
-
-    def __parse_headers(self, header_root):
+class PodsSandbox:
+    """
+    提供 $PODS_ROOT 目录下 module、头文件等内容
+    """
+    def __init__(self, pods_root: str) -> None:
+        self.__pods_root = os.path.expanduser(pods_root)
+ 
+    @lazy_property
+    def modules(self) -> list[Module]:   
         """
-        解析 Headers 下所有头文件
+        提取所有 module，写入 name、umbrella headers、modulemap 等信息
         """
-        for x in os.listdir(header_root):
-            if x.startswith("."): continue
+        modules = []
 
-            paths, mapping = self.fetch_pod_headers(os.path.join(header_root, x))
-            self.header_paths[x] = paths
-            
-            # 合并不同模块的字典，不重写已有 key
-            for k, v in mapping.items():
-                if not self.headers_mapping.get(k):
-                    self.headers_mapping[k] = v
-                else:
-                    print(f"发现重名头文件：{k}")
-
-        print("")
-
-    def fetch_pod_headers(self, header_dir: str) -> tuple[set, dict]:
-        """
-        获取指定组件下的所有 .h 文件相对路径
-        """
-        header_paths, header_mapping = set(), {}
-
-        for root, _, files in os.walk(header_dir):
+        for root, dir, files in os.walk(
+            os.path.join(self.__pods_root, "Headers/Public")
+        ):
             for file in files:
-                # 与 header_dir 之间的相对路径
-                if header_dir != root:
-                    file = os.path.join(os.path.relpath(root, header_dir), file)
-                
-                header_paths.add(file)
-                header_mapping[file] = os.path.basename(header_dir)
-                # if os.path.islink(os.path.join(root, file)):
-                #     real_path = os.readlink(os.path.join(root, file))
-                #     real_path = os.path.abspath(real_path)
-                
-        return header_paths, header_mapping
+                if not file.endswith("-umbrella.h"):  continue
+                    
+                umbrella_imports = Umbrella(file).imports
+                module = Module(
+                    os.path.basename(root), 
+                    os.path.basename(file).split("-")[0], 
+                    umbrella_imports
+                )
 
+                modules.append(module)
+                dir[:] = []
+
+        return modules
+
+    @lazy_property
+    def pod_modulemaps(self) -> dict:
+        """
+        各组件 OTHER_C_FLAGS 已有的 modulemap
+        """
+        pod_modulemaps = {}
+
+        for root, _, files in os.walk(
+            os.path.join(self.__pods_root, "Target Support Files")
+        ):
+            for file in files:
+                if not file.endswith("debug.xcconfig"): continue
+
+                modulemaps = Xcconfig(file).modulemaps
+                pod_modulemaps[os.path.basename(root)] = modulemaps
+        
+        return pod_modulemaps
+
+
+    @lazy_property
+    def private_headers(self) -> dict:
+        """
+        所有的 pod => {.h} 映射关系
+        """
+        private_root = os.path.join(self.__pods_root, "Headers/Private")
+        res = {}
+
+        for x in os.listdir(private_root):
+            if x.startswith("."): continue
+            
+            # 提取 x 组件下的所有头文件
+            headers = set()
+            for root, _, files in os.walk(
+                os.path.join(private_root, x)
+            ):
+                headers.update(set(files))
+
+            res[x] = headers
+        
+        return res

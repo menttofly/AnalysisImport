@@ -8,7 +8,7 @@ from pipeline import Pipeine
 """
 修复依赖关系
 """
-class DependencyRepair(Pipeine):
+class RepairDependency(Pipeine):
 
     def process(self, file: str) -> str:
         return ""

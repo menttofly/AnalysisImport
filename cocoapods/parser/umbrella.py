@@ -4,6 +4,7 @@
 __author__ = "zhengqi"
 
 import os, re
+from lazy import lazy_property
 
 class Umbrella:
     """
@@ -11,18 +12,9 @@ class Umbrella:
     """
     def __init__(self, path: str) -> None:
         self.__umbrella_file = os.path.expanduser(path)
-        pass
 
-    @property
-    def module(self):
-        """
-        返回所属 module
-        """
-        return os.path.basename(
-            os.path.dirname(self.__umbrella_file)
-        )
-
-    def parse(self):
+    @lazy_property
+    def imports(self) -> set[str]:
         """
         提取所有 import 语句
         """
@@ -34,4 +26,13 @@ class Umbrella:
                 if not header: continue
                 imports.add(header[1])
 
-        self.imports = imports
+        return imports
+
+    @property
+    def module(self):
+        """
+        返回所属 module
+        """
+        return os.path.basename(
+            os.path.dirname(self.__umbrella_file)
+        )
