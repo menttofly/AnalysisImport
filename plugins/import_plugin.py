@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-import fileinput, sys, re
+import re
 
 from cocoapods.sandbox import PodsSandbox
 from .plugin import Plugin
@@ -15,13 +15,12 @@ class ImportPlugin(Plugin):
 
     def process(self, pod: str, input_file: str):
         """
-        替换未带命名空间 #import
+        un-namespced #import => namespced #import
         """
-        pod_headers = self.sanbox.module_headers[pod]
-        
+        headers = self.sanbox.module_headers[pod]
 
         def namespaced(imported: re.Match) -> str:
-            if imported[1] in pod_headers: 
+            if imported[1] in headers: 
                 return imported.group()
              
             # un-namspced 替换为 namespaced
@@ -30,27 +29,15 @@ class ImportPlugin(Plugin):
             else:
                 return imported.group()
 
-        with open(input_file, "r+") as file:
-            content = file.read()
-            content = re.sub(
-                r'#import\s"([^\/\s\n]+\.h)"', namespaced, content
+        with open(input_file, "r+") as f:
+            contents = f.read()
+            contents = re.sub(
+                r'#import\s"([^\/\s\n]+\.h)"', namespaced, contents
             )
             
-            file.seek(0)
-            file.truncate()
-            file.write(content)
-
-        # for line in fileinput.input(input_file, inplace=True):
-        #     imported = re.match(r'#import\s"([^\/\s\n]+\.h)"', line)
-            
-        #     if not imported: continue
-        #     if imported[1] in self_headers: continue
-
-        #     # un-namspced 替换为 namespaced
-        #     if namespaced := self.sanbox.namespaced_headers.get(imported[1]):
-        #         sys.stdout.write(f"# import <{namespaced}>")
-
-        print("")
+            f.seek(0)
+            f.truncate()
+            f.write(contents)
 
     def ouput(self) -> str:
         pass

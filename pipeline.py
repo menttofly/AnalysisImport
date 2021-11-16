@@ -12,10 +12,10 @@ class Pipeline:
     def __init__(self, plugins: list[Plugin]) -> None:
         self.__plugins = plugins
 
-    def run(self, pod: str, source_files: list[str]):
+    def run(self, module: str, files: list[str]):
         """
-        以 pod 为单位，处理源文件
+        按组件 module 处理其中 .{h,m}
         """
-        for file in source_files:
+        for file in files:
             for plugin in self.__plugins:
-                plugin.process(pod, file)
+                plugin.process(module, file)
