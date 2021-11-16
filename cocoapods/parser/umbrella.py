@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, re
-from lazy import lazy_property
+from cocoapods.lazy import lazy_property
 
 class Umbrella:
     """

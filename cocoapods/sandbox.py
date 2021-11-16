@@ -4,10 +4,10 @@
 __author__ = "zhengqi"
 
 import os
-from lazy import lazy_property
+from .lazy import lazy_property
 from dataclasses import dataclass
-from parser.umbrella import Umbrella
-from parser.xcconfig import Xcconfig
+from cocoapods.parser.umbrella import Umbrella
+from cocoapods.parser.xcconfig import Xcconfig
 
 @dataclass
 class Module:
@@ -70,23 +70,48 @@ class PodsSandbox:
 
 
     @lazy_property
-    def private_headers(self) -> dict:
+    def module_headers(self) -> dict:
         """
-        所有的 pod => {.h} 映射关系
+        所有的 pod => {.h} 映射关系，头文件保留基于 pod 目录相对路径
         """
         private_root = os.path.join(self.__pods_root, "Headers/Private")
-        res = {}
+        module_headers = {}
 
         for x in os.listdir(private_root):
             if x.startswith("."): continue
             
             # 提取 x 组件下的所有头文件
-            headers = set()
-            for root, _, files in os.walk(
-                os.path.join(private_root, x)
-            ):
-                headers.update(set(files))
+            x, headers = os.path.join(private_root, x), set()
+            for root, _, files in os.walk(x):
 
-            res[x] = headers
+                for file in files:
+                    if not file.endswith(".h"): continue
+                    if root != x:
+                        file = os.path.join(
+                            os.path.relpath(root, x), file
+                        )
+                    headers.add(file)
+
+            module_headers[os.path.basename(x)] = headers
         
-        return res
+        return module_headers
+
+    @lazy_property
+    def namespaced_headers(self) -> dict:
+        """
+        un-namspaced => namespaced 
+        """
+        merged = {}
+        for module, headers in self.module_headers.items():
+            mapping = {
+                os.path.basename(x): 
+                os.path.join(module, x) for x in headers
+            }
+            
+            for k, v in mapping.items():
+                if not merged.get(k):
+                    merged[k] = v
+                else:
+                    print(f"重名头文件: {k}")
+        
+        return merged
