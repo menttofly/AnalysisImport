@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-from plugin import Plugin
+from .plugin import Plugin
 
 """
 修复依赖关系
