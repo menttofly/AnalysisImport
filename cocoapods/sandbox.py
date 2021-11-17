@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os
-from .lazy import lazy_property
+from lazy import lazy_property
 from dataclasses import dataclass
 from cocoapods.parser.umbrella import Umbrella
 from cocoapods.parser.xcconfig import Xcconfig

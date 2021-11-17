@@ -31,15 +31,11 @@ def list_all_files(directory: str) -> list[str]:
 if __name__ == "__main__":
 
     # 创建 pipeline，引入插件
-    sanbox = PodsSandbox(
-        "/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Pods"
-    )
+    sanbox = PodsSandbox("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Pods")
     pipeline = Pipeline([ImportPlugin(sanbox)])
 
     # 分析当前依赖
-    dependencies = Dependency(
-        "/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Podfile.lock"
-    )
+    dependencies = Dependency("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Podfile.lock")
     dependencies.analyze()
 
     modules_dir = "/Users/menttofly/Desktop/Gaoding-iOS/modules"
@@ -55,9 +51,7 @@ if __name__ == "__main__":
         if x == "GDAPI" or x not in dependencies.pods: 
             continue
 
-        source_files = list_all_files(
-            os.path.join(modules_dir, x)
-        )
+        source_files = list_all_files(os.path.join(modules_dir, x))
         pipeline.run(x, source_files)
 
     print("Done!!!")
