@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, re
-from cocoapods.lazy import lazy_property
+from lazy import lazy_property
 
 class Xcconfig:
     """

@@ -21,7 +21,7 @@ class Plugin(ABC):
         """
         pass
 
-    @abstractproperty
+    @property
     def ouput(self) -> str:
         """
         输出分析结果（如有）
