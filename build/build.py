@@ -4,32 +4,34 @@
 __author__ = "zhengqi"
 
 from enum import Enum
-from abc import ABC
+from abc import ABC, abstractclassmethod
+from typing import Any
 
 class stage(Enum):
     """
     编译流程中各执行阶段
     """
-    TOTAL_EXECUTE_COMPILER = "Total ExecuteCompiler"
-    TOTAL_FRONTEND = "Total Frontend"
-    TOTAL_SOURCE = "Total Source"
-    TOTAL_MODULE_LOAD = "Total Module Load"
-    TOTAL_MODULE_COMPILE = "Total Module Compile"
-    TOTAL_BACKEND = "Total Backend"
+    total_execute_compiler = "Total ExecuteCompiler"
+    total_frontend = "Total Frontend"
+    total_source = "Total Source"
+    total_module_load = "Total Module Load"
+    total_module_compile = "Total Module Compile"
+    total_backend = "Total Backend"
 
-stages = {
-    stage.TOTAL_EXECUTE_COMPILER.value,
-    stage.TOTAL_FRONTEND.value,
-    stage.TOTAL_SOURCE.value,
-    stage.TOTAL_MODULE_LOAD.value,
-    stage.TOTAL_MODULE_COMPILE.value,
-    stage.TOTAL_BACKEND.value,
-}
+stages = { e.name: e.value for e in stage }
+stages_reversed = { e.value: e.name for e in stage }
 
 class Build(ABC):
     """
     Build 组合抽象接口
     """
+    @property
+    def context(self) -> str:
+        """
+        构建的上下文
+        """
+        pass
+
     @property
     def total_execute_compiler(self) -> float:
         """

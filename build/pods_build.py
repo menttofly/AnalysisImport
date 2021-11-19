@@ -89,12 +89,12 @@ class PodsBuild(Build):
     def json_object(self) -> dict:
         
         trace_events = {
-            stage.TOTAL_EXECUTE_COMPILER.value: self.total_execute_compiler,
-            stage.TOTAL_FRONTEND.value: self.total_frontend,
-            stage.TOTAL_SOURCE.value: self.total_source,
-            stage.TOTAL_MODULE_LOAD.value: self.total_module_load,
-            stage.TOTAL_MODULE_COMPILE.value: self.total_module_compile,
-            stage.TOTAL_BACKEND.value: self.total_backend,
+            stage.total_execute_compiler.value: self.total_execute_compiler,
+            stage.total_frontend.value: self.total_frontend,
+            stage.total_source.value: self.total_source,
+            stage.total_module_load.value: self.total_module_load,
+            stage.total_module_compile.value: self.total_module_compile,
+            stage.total_backend.value: self.total_backend,
         }
 
         return {

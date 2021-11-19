@@ -5,7 +5,7 @@ __author__ = "zhengqi"
 
 import os, heapq
 from .build import Build, stage
-from .file_build import FileBuild
+from .file_build import File
 from lazy import lazy_property
 from functools import reduce
 
@@ -15,12 +15,13 @@ class TargetBuild(Build):
     """
     def __init__(self, build_dir: str):
         
-        builds: list[FileBuild] = []
+        builds: list[Build] = []
         for root, _, files in os.walk(build_dir):
             for file in files:
                 if not file.endswith(".json"): continue
 
-                leaf = FileBuild(os.path.join(root, file))
+                # leaf = FileBuild(os.path.join(root, file))
+                leaf = File.from_build(os.path.join(root, file))
                 builds.append(leaf)
 
         self.__build_files = builds
@@ -87,12 +88,12 @@ class TargetBuild(Build):
     def json_object(self) -> dict:
 
         trace_events = {
-            stage.TOTAL_EXECUTE_COMPILER.value: self.total_execute_compiler,
-            stage.TOTAL_FRONTEND.value: self.total_frontend,
-            stage.TOTAL_SOURCE.value: self.total_source,
-            stage.TOTAL_MODULE_LOAD.value: self.total_module_load,
-            stage.TOTAL_MODULE_COMPILE.value: self.total_module_compile,
-            stage.TOTAL_BACKEND.value: self.total_backend,
+            stage.total_execute_compiler.value: self.total_execute_compiler,
+            stage.total_frontend.value: self.total_frontend,
+            stage.total_source.value: self.total_source,
+            stage.total_module_load.value: self.total_module_load,
+            stage.total_module_compile.value: self.total_module_compile,
+            stage.total_backend.value: self.total_backend,
         }
         return {
             "build_target": self.__target_name,

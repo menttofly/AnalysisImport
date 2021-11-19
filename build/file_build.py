@@ -4,50 +4,45 @@
 __author__ = "zhengqi"
 
 import json, os
-from .build import Build, stage, stages
+from .build import Build, stages, stages_reversed
 from lazy import lazy_property
-from dataclasses import dataclass
+from dataclasses import dataclass, field, fields
+from functools import reduce
 
-# @dataclass
-class FileBuild(Build):
+@dataclass(frozen=True)
+class File(Build):
     """
     解析单个文件 build 数据
     """
-    def __init__(self, json_file: str):
-        
+    context: str = ""
+    
+    total_execute_compiler: float = 0
+    total_frontend:         float = 0
+    total_source:           float = 0
+    total_module_load:      float = 0
+    total_module_compile:   float = 0
+    total_backend:          float = 0
+
+    @classmethod
+    def from_build(self, json_file: str) -> Build:
+        """
+        从 json 文件初始化
+        """
+        def fuction(acc: dict, x: dict) -> dict:
+            if x["name"] in stages_reversed:
+                acc[stages_reversed[x["name"]]] = round(x["dur"] / 1000.0, 3)
+
+            return acc
+
         with open(json_file) as f:
-            data, raw_trace = json.load(f), {}
+            object = reduce(
+                fuction, json.load(f).get("traceEvents", []), {}
+            )
+            object["context"] = os.path.splitext(
+                os.path.basename(json_file)
+            )[0] + ".o"
 
-            for item in data.get("traceEvents", []):
-                if "dur" not in item.keys(): continue
-                raw_trace[item["name"]] = round(item["dur"] / 1000.0, 3)
-
-            self.__raw_trace = raw_trace
-            self.__file_name = os.path.splitext(os.path.basename(json_file))[0] + ".o"
-
-    @property
-    def total_execute_compiler(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_EXECUTE_COMPILER.value, 0.0)
-
-    @property
-    def total_frontend(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_FRONTEND.value, 0.0)
-
-    @property
-    def total_source(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_SOURCE.value, 0.0)
-
-    @property
-    def total_module_load(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_MODULE_LOAD.value, 0.0)
-
-    @property
-    def total_module_compile(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_MODULE_COMPILE.value, 0.0)
-
-    @property
-    def total_backend(self) -> float:
-        return self.__raw_trace.get(stage.TOTAL_BACKEND.value, 0.0)
+            return File(**object)
 
     @property
     def top_10_builds(self) -> list:
@@ -56,10 +51,10 @@ class FileBuild(Build):
     @lazy_property
     def json_object(self) -> dict[str: float]:
 
-        trace_events = { 
-            k: v for k, v in self.__raw_trace.items() if k in stages
+        trace_events = {
+            stages[field.name]: getattr(self, field.name) for field in fields(File) if field.name in stages
         }
         return {
-            "build_file": self.__file_name,
+            "build_file": self.context,
             "trace_events": trace_events
         }
