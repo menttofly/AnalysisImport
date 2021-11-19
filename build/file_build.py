@@ -6,7 +6,9 @@ __author__ = "zhengqi"
 import json, os
 from .build import Build, stage, stages
 from lazy import lazy_property
+from dataclasses import dataclass
 
+# @dataclass
 class FileBuild(Build):
     """
     解析单个文件 build 数据
@@ -25,27 +27,27 @@ class FileBuild(Build):
 
     @property
     def total_execute_compiler(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_EXECUTE_COMPILER.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_EXECUTE_COMPILER.value, 0.0)
 
     @property
     def total_frontend(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_FRONTEND.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_FRONTEND.value, 0.0)
 
     @property
     def total_source(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_SOURCE.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_SOURCE.value, 0.0)
 
     @property
     def total_module_load(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_MODULE_LOAD.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_MODULE_LOAD.value, 0.0)
 
     @property
     def total_module_compile(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_MODULE_COMPILE.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_MODULE_COMPILE.value, 0.0)
 
     @property
     def total_backend(self) -> float:
-        return round(self.__raw_trace.get(stage.TOTAL_BACKEND.value, 0.0), 3)
+        return self.__raw_trace.get(stage.TOTAL_BACKEND.value, 0.0)
 
     @property
     def top_10_builds(self) -> list:

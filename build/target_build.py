@@ -23,49 +23,49 @@ class TargetBuild(Build):
                 leaf = FileBuild(os.path.join(root, file))
                 builds.append(leaf)
 
-        self.__file_builds = builds
+        self.__build_files = builds
         self.__target_name = os.path.basename(build_dir).split(".")[0]
     
     @lazy_property
     def total_execute_compiler(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_execute_compiler, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
     def total_frontend(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_frontend, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
     def total_source(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_source, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
     def total_module_load(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_module_load, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
     def total_module_compile(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_module_compile, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
     def total_backend(self) -> float:
         return reduce(
             lambda acc, cur: acc + cur.total_backend, 
-            self.__file_builds, 0.0
+            self.__build_files, 0.0
         )
 
     @lazy_property
@@ -74,7 +74,7 @@ class TargetBuild(Build):
         耗时前 10 的源文件
         """
         builds = heapq.nlargest(
-            10, self.__file_builds, 
+            10, self.__build_files, 
             key=lambda build: build.total_execute_compiler
         )
         builds.sort(

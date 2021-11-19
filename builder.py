@@ -8,7 +8,7 @@ from build.pods_build import PodsBuild
 
 if __name__ == "__main__":
 
-    workspace = "ModuleTest"
+    workspace = "ModuleTest"  # FireCat
     
     builder = PodsBuild(workspace)
     build_info = builder.json_object
