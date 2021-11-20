@@ -4,8 +4,7 @@
 __author__ = "zhengqi"
 
 from enum import Enum
-from abc import ABC, abstractclassmethod
-from typing import Any
+from dataclasses import dataclass, field
 
 class stage(Enum):
     """
@@ -21,58 +20,20 @@ class stage(Enum):
 stages = { e.name: e.value for e in stage }
 stages_reversed = { e.value: e.name for e in stage }
 
-class Build(ABC):
+@dataclass
+class Build:
     """
     Build 组合抽象接口
     """
-    @property
-    def context(self) -> str:
-        """
-        构建的上下文
-        """
-        pass
-
-    @property
-    def total_execute_compiler(self) -> float:
-        """
-        编译总时长
-        """
-        pass
+    context: str = "" # 构建的上下文
+    dependencies: list = field(default_factory=list) # 所有子任务
     
-    @property 
-    def total_frontend(self) -> float:
-        """
-        前端总时长
-        """
-        pass
-
-    @property 
-    def total_source(self) -> float:
-        """
-        头文件处理总时长
-        """
-        pass
-
-    @property
-    def total_module_load(self) -> float:
-        """
-        Module 加载总时长
-        """
-        pass
-
-    @property
-    def total_module_compile(self) -> float:
-        """
-        Module 编译总时长
-        """
-        pass
-
-    @property 
-    def total_backend(self) -> float:
-        """
-        后端总时长
-        """
-        pass
+    total_execute_compiler: float = 0 # 编译总时长
+    total_frontend:         float = 0 # 前端总时长
+    total_source:           float = 0 # 头文件处理总时长
+    total_module_load:      float = 0 # Module 加载总时长
+    total_module_compile:   float = 0 # Module 编译总时长
+    total_backend:          float = 0 # 后端总时长
 
     @property 
     def top_10_builds(self) -> list:
