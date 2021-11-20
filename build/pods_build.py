@@ -71,13 +71,3 @@ class Pods(Build):
             "trace_events": trace_events,
             "top_10_builds": [x.json_object for x in self.top_10_builds],
         }
-
-    
-                
-
-            
-            
-            
-
-
-    
