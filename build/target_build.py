@@ -31,7 +31,7 @@ class Target(Build):
         def fuction(acc: dict, x: Build) -> dict:
             return {
                 field.name: (acc.get(field.name, 0.0) + getattr(x, field.name)) 
-                for field in fields(Target) if field.name in stages
+                for field in fields(Build) if field.name in stages
             }
 
         kwargs = reduce(fuction, dependencies, {})
