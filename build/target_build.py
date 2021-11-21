@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, heapq
-from .build import Build, stage, stages
+from .build import Build, stages
 from .file_build import File
 from lazy import lazy_property
 from functools import reduce
