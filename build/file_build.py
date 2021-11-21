@@ -40,7 +40,7 @@ class File(Build):
         pass
 
     @lazy_property
-    def json_object(self) -> dict[str: float]:
+    def json_object(self) -> dict:
 
         trace_events = {
             stages[field.name]: round(getattr(self, field.name) / 1000.0, 3) 
