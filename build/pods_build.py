@@ -48,6 +48,7 @@ class Pods(Build):
         kwargs = reduce(fuction, dependencies, {})
         kwargs = {k: round(v, 3) for k, v in kwargs.items()}
         kwargs["dependencies"] = dependencies
+        kwargs["context"] = project
         
         return Pods(**kwargs)
 
@@ -68,6 +69,7 @@ class Pods(Build):
             for field in fields(Build) if field.name in stages
         }
         return {
+            "build_project": self.context,
             "trace_events": trace_events,
             "top_10_builds": [x.json_object for x in self.top_10_builds],
         }
