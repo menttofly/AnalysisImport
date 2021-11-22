@@ -5,11 +5,13 @@ __author__ = "zhengqi"
 
 import re
 
-from cocoapods.sandbox import PodsSandbox
 from .plugin import Plugin
+from cocoapods.sandbox import PodsSandbox
 
 class ImportPlugin(Plugin):
-
+    """
+    修复未带命名空间的 import
+    """
     def __init__(self, sanbox: PodsSandbox):
         self.sanbox = sanbox
 
@@ -17,14 +19,14 @@ class ImportPlugin(Plugin):
         """
         un-namespced #import => namespced #import
         """
-        headers = self.sanbox.module_headers[pod]
+        headers = self.sanbox.pod_headers[pod]
 
         def namespaced(imported: re.Match) -> str:
             if imported[1] in headers: 
                 return imported.group()
              
             # un-namspced 替换为 namespaced
-            if namespaced := self.sanbox.namespaced_headers.get(imported[1]):
+            if namespaced := self.sanbox.pod_namespaced_headers.get(imported[1]):
                 return f"#import <{namespaced}>"
             else:
                 return imported.group()

@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-from abc import ABC, abstractmethod, abstractproperty
+from abc import ABC, abstractmethod
 from cocoapods.sandbox import PodsSandbox
 
 class Plugin(ABC):

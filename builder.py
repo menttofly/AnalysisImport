@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, json
-from build.pods_build import Pods
+from build.components import Pods
 
 if __name__ == "__main__":
 

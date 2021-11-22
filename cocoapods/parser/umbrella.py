@@ -20,7 +20,7 @@ class Umbrella:
         """
         imports = set()
         with open(self.__umbrella_file) as file:
-            for line in file.readlines:
+            for line in file.readlines():
                 header = re.match(r'#import\s"(\S+)"', line)
 
                 if not header: continue

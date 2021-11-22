@@ -7,6 +7,7 @@ import os
 from cocoapods.sandbox import PodsSandbox
 from cocoapods.parser.dependency import Dependency
 from plugins.import_plugin import ImportPlugin
+from plugins.module_plugin import ModulePlugin
 from plugins.plugin import Plugin
 
 class Pipeline:
@@ -47,7 +48,7 @@ if __name__ == "__main__":
 
     # 创建 pipeline，引入插件
     sanbox = PodsSandbox("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Pods")
-    pipeline = Pipeline([ImportPlugin(sanbox)])
+    pipeline = Pipeline([ImportPlugin(sanbox), ModulePlugin(sanbox)])
 
     # 分析当前依赖
     dependencies = Dependency("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Podfile.lock")
@@ -63,7 +64,8 @@ if __name__ == "__main__":
 
         if x in presets.keys():
             x = presets[x]
-        if x == "GDAPI" or x not in dependencies.pods: 
+
+        if x not in dependencies.pods: 
             continue
 
         source_files = list_all_files(os.path.join(modules_dir, x))

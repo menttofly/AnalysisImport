@@ -5,6 +5,7 @@ __author__ = "zhengqi"
 
 import os
 from lazy import lazy_property
+from functools import reduce
 from dataclasses import dataclass
 from cocoapods.parser.umbrella import Umbrella
 from cocoapods.parser.xcconfig import Xcconfig
@@ -38,7 +39,7 @@ class PodsSandbox:
             for file in files:
                 if not file.endswith("-umbrella.h"):  continue
                     
-                umbrella_imports = Umbrella(file).imports
+                umbrella_imports = Umbrella(os.path.join(root, file)).imports
                 module = Module(
                     os.path.basename(root), 
                     os.path.basename(file).split("-")[0], 
@@ -49,6 +50,19 @@ class PodsSandbox:
                 dir[:] = []
 
         return modules
+
+    @lazy_property
+    def headers_to_module(self) -> dict[str: tuple]:
+        """
+        umbrella.h 中的头文件 => (所属的 module, pod_name)
+        """
+        def function(acc: dict, module: Module) -> dict:
+            for header in module.umbrella_imports:
+                if not acc.get(header):
+                    acc[header] = (module.name, module.modulemap_name)
+            return acc
+
+        return reduce(function, self.modules, {})
 
     @lazy_property
     def pod_modulemaps(self) -> dict:
@@ -63,19 +77,18 @@ class PodsSandbox:
             for file in files:
                 if not file.endswith("debug.xcconfig"): continue
 
-                modulemaps = Xcconfig(file).modulemaps
+                modulemaps = Xcconfig(os.path.join(root, file)).modulemaps
                 pod_modulemaps[os.path.basename(root)] = modulemaps
         
         return pod_modulemaps
 
-
     @lazy_property
-    def module_headers(self) -> dict:
+    def pod_headers(self) -> dict:
         """
         所有的 pod => {.h} 映射关系，头文件保留基于 pod 目录相对路径
         """
         private_root = os.path.join(self.__pods_root, "Headers/Private")
-        module_headers = {}
+        pod_headers = {}
 
         for x in os.listdir(private_root):
             if x.startswith("."): continue
@@ -92,17 +105,17 @@ class PodsSandbox:
                         )
                     headers.update({file})
 
-            module_headers[os.path.basename(x)] = headers
+            pod_headers[os.path.basename(x)] = headers
         
-        return module_headers
+        return pod_headers
 
     @lazy_property
-    def namespaced_headers(self) -> dict:
+    def pod_namespaced_headers(self) -> dict:
         """
         un-namspaced => namespaced 
         """
         merged = {}
-        for module, headers in self.module_headers.items():
+        for module, headers in self.pod_headers.items():
             mapping = {
                 os.path.basename(x): 
                 os.path.join(module, x) for x in headers

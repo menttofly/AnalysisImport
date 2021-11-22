@@ -23,7 +23,7 @@ class Xcconfig:
             
         map_files = re.findall(r'-fmodule-map-file="(\S+)"', other_c_flags)
         return [
-            os.path.basename(x[1]).splitext[0] for x in map_files
+            os.path.basename(x).split(".")[0] for x in map_files
         ]
 
     @lazy_property
@@ -37,6 +37,6 @@ class Xcconfig:
                 res = re.match(r"(\w+)\s=\s([^\n]+)", line)
                 
                 if not res: continue
-                self.raw_configs[res[1]] = res[2]  
+                raw_configs[res[1]] = res[2]  
 
         return raw_configs     
