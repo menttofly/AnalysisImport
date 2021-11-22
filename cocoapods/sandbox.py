@@ -90,7 +90,7 @@ class PodsSandbox:
                         file = os.path.join(
                             os.path.relpath(root, x), file
                         )
-                    headers.add(file)
+                    headers.update({file})
 
             module_headers[os.path.basename(x)] = headers
         

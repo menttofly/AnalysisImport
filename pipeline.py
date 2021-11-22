@@ -38,7 +38,7 @@ def list_all_files(directory: str) -> list[str]:
 
         for file in files:
             if file.startswith("."): continue
-            if file.endswith('.h') or file.endswith('.m'):
+            if file.endswith('.h') or file.endswith('.m') or file.endswith('.mm'):
                 res.append(os.path.join(root, file))
 
     return res
