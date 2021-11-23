@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, re
-from lazy import lazy_property
+from functools import cached_property
 
 class Xcconfig:
     """
@@ -13,12 +13,12 @@ class Xcconfig:
     def __init__(self, path: str) -> None:
         self.__config_file = os.path.expanduser(path)
 
-    @lazy_property
+    @cached_property
     def modulemaps(self) -> set[str]:
         """
         支持用 @import 引用已声明 module
         """
-        other_c_flags = self.raw_configs["OTHER_CFLAGS"]
+        other_c_flags = self.raw_configs.get("OTHER_CFLAGS")
         if not other_c_flags: return None
             
         map_files = re.findall(r'-fmodule-map-file="(\S+)"', other_c_flags)
@@ -26,7 +26,7 @@ class Xcconfig:
             os.path.basename(x).split(".")[0] for x in map_files
         ]
 
-    @lazy_property
+    @cached_property
     def raw_configs(self) -> dict[str: str]:
         """
         提取所有的 raw 配置，并以字典形式存储

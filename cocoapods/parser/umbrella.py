@@ -4,7 +4,7 @@
 __author__ = "zhengqi"
 
 import os, re
-from lazy import lazy_property
+from functools import cached_property
 
 class Umbrella:
     """
@@ -13,7 +13,7 @@ class Umbrella:
     def __init__(self, path: str) -> None:
         self.__umbrella_file = os.path.expanduser(path)
 
-    @lazy_property
+    @cached_property
     def imports(self) -> set[str]:
         """
         提取所有 import 语句

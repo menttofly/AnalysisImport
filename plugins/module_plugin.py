@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-import os, re
+import re
 from .plugin import Plugin
 from cocoapods.sandbox import PodsSandbox
 
@@ -15,17 +15,19 @@ class ModulePlugin(Plugin):
         self.sanbox = sanbox
 
     def process(self, pod: str, input_file: str):
-        if input_file.endswith(".mm"): 
+        if input_file.endswith(".mm") or input_file.endswith(".h"): 
+            # .mm 不支持 module，.h 依赖声明缺失会导致 @import 报错：could not find module
             return
 
         modulemaps = self.sanbox.pod_modulemaps.get(pod, set())
         
         def function(imported: re.Match) -> str:
+            if not modulemaps: return imported.group()
 
             for importe in [f"{imported[1]}/{imported[2]}", imported[2]]:
                 if not self.sanbox.headers_to_module.get(importe):
                     continue
-                
+
                 module, pod_name = self.sanbox.headers_to_module.get(importe)
                 if pod_name == pod:
                     return imported.group()
@@ -44,6 +46,3 @@ class ModulePlugin(Plugin):
             f.seek(0)
             f.truncate()
             f.write(contents)
-    
-    def ouput(self) -> str:
-        pass

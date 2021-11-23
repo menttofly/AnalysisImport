@@ -3,27 +3,49 @@
 
 __author__ = "zhengqi"
 
-import os
+import os, json
 from cocoapods.sandbox import PodsSandbox
 from cocoapods.parser.dependency import Dependency
 from plugins.import_plugin import ImportPlugin
 from plugins.module_plugin import ModulePlugin
+from plugins.dependency_plugin import DependencyPlugin
 from plugins.plugin import Plugin
 
 class Pipeline:
     """
     串联 Plugin，执行主流程
     """
-    def __init__(self, plugins: list[Plugin]) -> None:
+    def __init__(self, plugins: list[Plugin], module: str) -> None:
         self.__plugins = plugins
+        self.__module = module
 
-    def run(self, module: str, files: list[str]):
+    def run(self, files: list[str]):
         """
         按组件 module 处理其中 .{h,m}
         """
         for file in files:
             for plugin in self.__plugins:
-                plugin.process(module, file)
+                plugin.process(self.__module, file)
+
+    def gather_reports(self):
+        """
+        报告收集
+        """
+        for plugin in self.__plugins:
+            if not plugin.name or not plugin.ouput:
+                continue
+
+            report_dir = os.path.join(os.path.dirname(__file__), "reports")
+            if not os.path.exists(report_dir):
+                os.makedirs(report_dir)
+
+            json_object = plugin.ouput
+            with open(os.path.join(report_dir, f"{self.__module}_{plugin.name}.json"), "w+") as f:
+                try:
+                    json_str = json.dumps(json_object, indent=4)
+                    f.write(json_str)
+                except Exception as e:
+                    print(f"生成json数据异常：<{str(e)}>")
 
 def list_all_files(directory: str) -> list[str]:
     """
@@ -46,13 +68,11 @@ def list_all_files(directory: str) -> list[str]:
 
 if __name__ == "__main__":
 
-    # 创建 pipeline，引入插件
-    sanbox = PodsSandbox("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Pods")
-    pipeline = Pipeline([ImportPlugin(sanbox), ModulePlugin(sanbox)])
-
     # 分析当前依赖
+    
     dependencies = Dependency("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Podfile.lock")
     dependencies.analyze()
+    sanbox = PodsSandbox("/Users/menttofly/Desktop/Gaoding-iOS/apps/fc_ios/FireCat/Pods", dependencies)
 
     modules_dir = "/Users/menttofly/Desktop/Gaoding-iOS/modules"
     for x in os.listdir(modules_dir):
@@ -68,7 +88,11 @@ if __name__ == "__main__":
         if x not in dependencies.pods: 
             continue
 
+        # 创建 pipeline，引入插件
+        pipeline = Pipeline([ImportPlugin(sanbox), DependencyPlugin(sanbox)], x) #  ModulePlugin(sanbox),
+
         source_files = list_all_files(os.path.join(modules_dir, x))
-        pipeline.run(x, source_files)
+        pipeline.run(source_files)
+        pipeline.gather_reports()
 
     print("Done!!!")

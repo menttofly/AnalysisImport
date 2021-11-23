@@ -40,6 +40,3 @@ class ImportPlugin(Plugin):
             f.seek(0)
             f.truncate()
             f.write(contents)
-
-    def ouput(self) -> str:
-        pass

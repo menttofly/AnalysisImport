@@ -5,9 +5,8 @@ __author__ = "zhengqi"
 
 import json, os, heapq
 from .build import Build, stages, stages_reversed
-from lazy import lazy_property
 from dataclasses import dataclass, fields
-from functools import reduce
+from functools import reduce, cached_property
 
 @dataclass
 class File(Build):
@@ -35,7 +34,7 @@ class File(Build):
 
             return File(**kwargs)
 
-    @lazy_property
+    @cached_property
     def json_object(self) -> dict:
 
         trace_events = {
@@ -79,7 +78,7 @@ class Target(Build):
 
         return Target(**kwargs)
 
-    @lazy_property
+    @cached_property
     def top_10_builds(self) -> list[Build]:
         """
         耗时前 10 的源文件
@@ -89,7 +88,7 @@ class Target(Build):
             key=lambda x: x.total_execute_compiler
         )
 
-    @lazy_property
+    @cached_property
     def json_object(self) -> dict:
 
         trace_events = {
@@ -146,7 +145,7 @@ class Pods(Build):
         
         return Pods(**kwargs)
 
-    @lazy_property
+    @cached_property
     def top_10_builds(self) -> list[Build]:
         """
         耗时前 10 的 target
@@ -155,7 +154,7 @@ class Pods(Build):
             self.dependencies, key=lambda x: x.total_execute_compiler, reverse=True
         )[0:10]
 
-    @lazy_property
+    @cached_property
     def json_object(self) -> dict:
         
         trace_events = {

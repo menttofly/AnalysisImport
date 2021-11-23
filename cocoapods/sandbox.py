@@ -3,15 +3,15 @@
 
 __author__ = "zhengqi"
 
-import os
-from lazy import lazy_property
-from functools import reduce
+import os, json
+from functools import reduce, cached_property
 from dataclasses import dataclass
 from cocoapods.parser.umbrella import Umbrella
 from cocoapods.parser.xcconfig import Xcconfig
+from cocoapods.parser.dependency import Dependency
 
 @dataclass
-class Module:
+class Module(object):
     """
     模块信息
     """
@@ -23,10 +23,11 @@ class PodsSandbox:
     """
     提供 $PODS_ROOT 目录下 module、头文件等内容
     """
-    def __init__(self, pods_root: str) -> None:
+    def __init__(self, pods_root: str, dependency: Dependency) -> None:
         self.__pods_root = os.path.expanduser(pods_root)
+        self.__dependency = dependency
  
-    @lazy_property
+    @cached_property
     def modules(self) -> list[Module]:   
         """
         提取所有 module，写入 name、umbrella headers、modulemap 等信息
@@ -51,7 +52,7 @@ class PodsSandbox:
 
         return modules
 
-    @lazy_property
+    @cached_property
     def headers_to_module(self) -> dict[str: tuple]:
         """
         umbrella.h 中的头文件 => (所属的 module, pod_name)
@@ -64,7 +65,7 @@ class PodsSandbox:
 
         return reduce(function, self.modules, {})
 
-    @lazy_property
+    @cached_property
     def pod_modulemaps(self) -> dict:
         """
         各组件 OTHER_C_FLAGS 已有的 modulemap
@@ -82,7 +83,7 @@ class PodsSandbox:
         
         return pod_modulemaps
 
-    @lazy_property
+    @cached_property
     def pod_headers(self) -> dict:
         """
         所有的 pod => {.h} 映射关系，头文件保留基于 pod 目录相对路径
@@ -109,7 +110,7 @@ class PodsSandbox:
         
         return pod_headers
 
-    @lazy_property
+    @cached_property
     def pod_namespaced_headers(self) -> dict:
         """
         un-namspaced => namespaced 
@@ -128,3 +129,15 @@ class PodsSandbox:
                     print(f"重名头文件: {k}")
         
         return merged
+
+    @cached_property
+    def target_for_namespaced_headers(self) -> dict:
+        res = {}
+        with open(os.path.join(self.__pods_root, "Headers/Target-of-headers.json"), "r") as f:
+            res = json.load(f)
+            
+        return res
+
+    @property
+    def dependency(self) -> Dependency:
+        return self.__dependency

@@ -16,10 +16,10 @@ if __name__ == "__main__":
 
     print(f"生成 {json_name}..")
 
-    with open(os.path.join(os.path.dirname(__file__), json_name), "w+") as file:
+    with open(os.path.join(os.path.dirname(__file__), json_name), "w+") as f:
         try:
             json_str = json.dumps(json_object, indent=4)
-            file.write(json_str)
+            f.write(json_str)
         except Exception as e:
             print(f"生成json数据异常：<{str(e)}>")
         else:

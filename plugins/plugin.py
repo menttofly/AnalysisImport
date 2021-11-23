@@ -22,7 +22,12 @@ class Plugin(ABC):
         pass
 
     @property
-    def ouput(self) -> str:
+    def name(self) -> str:
+        "插件名"
+        pass
+
+    @property
+    def ouput(self) -> any:
         """
         输出分析结果（如有）
         """
