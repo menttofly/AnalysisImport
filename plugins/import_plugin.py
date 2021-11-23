@@ -4,7 +4,6 @@
 __author__ = "zhengqi"
 
 import re
-
 from .plugin import Plugin
 from cocoapods.sandbox import PodsSandbox
 
