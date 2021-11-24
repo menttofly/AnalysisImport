@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-import os, json
+import os, json, subprocess
 from functools import reduce, cached_property
 from dataclasses import dataclass
 from cocoapods.parser.umbrella import Umbrella
@@ -132,11 +132,29 @@ class PodsSandbox:
 
     @cached_property
     def target_for_namespaced_headers(self) -> dict:
-        res = {}
-        with open(os.path.join(self.__pods_root, "Headers/Target-of-headers.json"), "r") as f:
-            res = json.load(f)
+        """
+        从 hmap 中提取 header 所属的 target 信息
+        """
+        hmap_file = os.path.join(self.__pods_root, "Headers/Pods-all-target-headers.hmap")
+        json_file = os.path.splitext(hmap_file)[0] + ".json"
+        
+        retcode = subprocess.run(f"hmap convert {hmap_file} {json_file}", shell=True, check=True)
+        if retcode.returncode != 0:
+            raise Exception(f"请确认 {hmap_file} 是否存在!")
+
+        mapping, private_headers = {}, os.path.join(self.__pods_root, "Headers/Private")
+        with open(json_file, "r") as f:
+
+            raw_data = json.load(f)
             
-        return res
+            def function(acc: dict, key: str) -> dict:
+                relpath = os.path.relpath(raw_data[key]["prefix"], private_headers)
+                acc[key] = relpath.split("/")[0]
+                return acc
+
+            mapping = reduce(function, raw_data, {})
+
+        return mapping
 
     @property
     def dependency(self) -> Dependency:
