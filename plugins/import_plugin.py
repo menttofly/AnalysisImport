@@ -3,7 +3,7 @@
 
 __author__ = "zhengqi"
 
-import re
+import re, os
 from .plugin import Plugin
 from cocoapods.sandbox import PodsSandbox
 
@@ -29,6 +29,9 @@ class ImportPlugin(Plugin):
                 return f"#import <{namespaced}>"
             else:
                 return imported.group()
+
+        if os.path.basename(input_file) == "GDWebBridgeShareManager":
+            print("got you!")
 
         with open(input_file, "r+") as f:
             contents = f.read()

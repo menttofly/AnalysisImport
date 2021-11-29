@@ -82,14 +82,15 @@ if __name__ == "__main__":
             "FocoVideo": "FocoVideoApp",
         }
 
+        target_name = x
         if x in presets.keys():
-            x = presets[x]
+            target_name = presets[x]
 
-        if x not in dependencies.pods: 
+        if target_name not in dependencies.pods: 
             continue
 
         # 创建 pipeline，引入插件
-        pipeline = Pipeline([ImportPlugin(sanbox), DependencyPlugin(sanbox)], x) #  ModulePlugin(sanbox),
+        pipeline = Pipeline([ImportPlugin(sanbox), DependencyPlugin(sanbox)], target_name) #  ModulePlugin(sanbox),
 
         source_files = list_all_files(os.path.join(modules_dir, x))
         pipeline.run(source_files)
