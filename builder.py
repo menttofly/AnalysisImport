@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     workspace = "FireCat" 
     
-    builder = Pods.from_build(workspace)
+    builder = Pods.from_scheme(workspace)
     json_object = builder.json_object
     json_name = f"{workspace}-build-time-trace.json"
 

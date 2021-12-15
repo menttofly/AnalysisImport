@@ -1,0 +1,67 @@
+{
+    "missing_dependencies": [
+        "GDMEditTools",
+        "GDMVideoEdit",
+        "GDMVideoTemplate"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/CoverTemplate/View/GDCoverTemplateCollectionViewCell.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDMVideoEdit/GDMVideoEditMaterialModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/util/GDTemplateCompositeSession.mm",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDMEditTools/FontManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/TransitionViewController/GDTemplateEffectViewController.h",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDMVideoTemplate/GDVideoTemplateDetailModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/TransitionViewController/GDTemplateEffectPresenter.m",
+            "imports": [
+                {
+                    "line_no": 40,
+                    "detail": "#import <GDMVideoEdit/GDMVideoEditLocalizable.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/ViewController/FCTemplateEditViewController.m",
+            "imports": [
+                {
+                    "line_no": 37,
+                    "detail": "#import <GDMVideoTemplate/XVTemplateBackgroundMusicSelectView.h>"
+                },
+                {
+                    "line_no": 85,
+                    "detail": "#import <GDMEditTools/FontManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplateUI/GDMVideoTemplateUI/Classes/ViewController/FCTemplateEditViewController.h",
+            "imports": [
+                {
+                    "line_no": 15,
+                    "detail": "#import <GDMVideoTemplate/GDVideoTemplateDetailModel.h>"
+                }
+            ]
+        }
+    ]
+}

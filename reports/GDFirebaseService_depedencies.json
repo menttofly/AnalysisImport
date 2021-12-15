@@ -1,0 +1,21 @@
+{
+    "missing_dependencies": [
+        "GDApp",
+        "GDRouter"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDFirebaseService/GDFirebaseService/Classes/APNS/GDAPNSMeditor.m",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDApp/GDAppManager.h>"
+                },
+                {
+                    "line_no": 16,
+                    "detail": "#import <GDRouter/GDRouter.h>"
+                }
+            ]
+        }
+    ]
+}

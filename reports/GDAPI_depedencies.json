@@ -1,0 +1,790 @@
+{
+    "missing_dependencies": [
+        "GDProtocols"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDFlutterBridge/APIs/GDFlutterAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMModel/Wrappers/MeBannersWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMModel/Wrappers/BaseCacheServiceWrapper.h",
+            "imports": [
+                {
+                    "line_no": 11,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMModel/Wrappers/BannerInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMModel/Wrappers/MyWebConfigWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/XVAssetLibrary/Wrappers/XVAssetWrapper.h",
+            "imports": [
+                {
+                    "line_no": 12,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditorFoundation/Wrappers/MyBaseVCWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditorFoundation/Wrappers/ImagePreviewWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditorFoundation/Protocols/ResourceCacheExtralProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditorFoundation/Protocols/StyleCacheExtralProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMVideoEdit/Wrappers/GDFilterInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMVideoEdit/Wrappers/GDFilterBackgroundWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDShare/Wrappers/GDShareBaseResponseWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMLogin/Wrappers/CodeInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMLogin/APIs/GDLoginAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDModel/Wrappers/GDModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDPush/APIs/GDPushAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDElementClipWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDGradientLocationWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDNinePatchFillingWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterLayoutBackgroundImageInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDTimeRangeWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDRelationInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterLayoutWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDBackgroundGradientWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDElementFilterWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDBaseElementWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterLayoutBackgroundModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDGradientFillingWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDImageSliceWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterLayoutImageModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDLayerAnimationWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterLayoutNinePatchModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDElementShadowWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDTransitionWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDBackgroundEffectWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDImageFillingWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDBorderWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDFlexWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDEffectedResultWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDGradientStopWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Wrappers/GDPainterInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDEditor/Protocols/PainterLocatableProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMWebAndRN/Wrappers/MyWebVCWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMWebAndRN/Wrappers/MyWebviewJSBridgeWrapper.h",
+            "imports": [
+                {
+                    "line_no": 11,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMWebAndRN/Wrappers/JSExportHandlerWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMWebAndRN/Protocols/FLWebViewProviderProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/GDShareMaterialShowViewWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/CustomMenuWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/CustomMenuViewWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/ArticleImagesWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/ArticleShareWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/FCForwardMediaWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/ReferenceWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/TeamWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/ReferenceDataInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/UserWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/MenuModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/TeamPostWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Wrappers/ImageWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/APIs/GDMWebAndRNShareAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/APIs/GDShareUIAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/ProjectApp/Protocols/CustomMenuViewDelegateProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDFoundation/Wrappers/GDBaseViewControllerWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDFoundation/Wrappers/DKModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateElementWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateContentWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ReEditTemplateWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ImageFilterWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ReEditElementWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ReEditLayoutWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TextCVCWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateMaterialWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ReEditImageWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/ReEditRecordWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateFixedElementWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/RuleInfoWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Wrappers/TemplateGlobalWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/APIs/GDMEditToolsAPI.h",
+            "imports": [
+                {
+                    "line_no": 8,
+                    "detail": "#import <GDProtocols/GDPDefine.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDMEditTools/Protocols/ImageSaveProtocol.h",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDImageTemplatePreviewModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDCoverWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDImageTemplateShareInfoModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDImageTemplateContentModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDMTemplateGlobalWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDAPI/GDAPI/Classes/GDImageTemplate/Wrappers/GDImageTemplateModelWrapper.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDProtocols/GDPProtocol.h>"
+                }
+            ]
+        }
+    ]
+}

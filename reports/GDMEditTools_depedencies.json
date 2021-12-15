@@ -1,0 +1,334 @@
+{
+    "missing_dependencies": [
+        "GDImageTemplate",
+        "GDMVideoEdit",
+        "GDCollage",
+        "GDMVideoTemplateUI"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/GDMEditToolsLaunchItem.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDImageTemplate/GDEditorWorkUploadManager.h>"
+                },
+                {
+                    "line_no": 17,
+                    "detail": "#import <GDMVideoEdit/GDVideoEditDataBaseManager.h>"
+                },
+                {
+                    "line_no": 18,
+                    "detail": "#import <GDMVideoEdit/GDMAssetPathCache.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/GDMEditToolsManager.h",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Track/GDWind+Pannel.m",
+            "imports": [
+                {
+                    "line_no": 23,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMImageBoxProperty.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/GDMToolPannel.m",
+            "imports": [
+                {
+                    "line_no": 18,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMUnifyBackground.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/SVG/View/GDSVGColorView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDPickerColorView.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/Template/GDNewTemplatePannelVM.m",
+            "imports": [
+                {
+                    "line_no": 23,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateDataService.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/TextSticker/GDMPannelVMTextStickerProperty.m",
+            "imports": [
+                {
+                    "line_no": 40,
+                    "detail": "#import <GDMVideoEdit/GDVECanvasUtils.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/Image/GDMPImageEffectColorPalettePopView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDCustomColorPicker.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/Image/GDMPImageEffectColorPannelPopView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDPickerColorView.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/WaterMark/GDMPannelVMWatermarkProperty.m",
+            "imports": [
+                {
+                    "line_no": 24,
+                    "detail": "#import <GDMVideoEdit/GDVECanvasUtils.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ToolPannel/Model/GDMPannelVMDefault+PannelItem.m",
+            "imports": [
+                {
+                    "line_no": 19,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateDataService.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Manager/GDImageMarkEditorManager+GDMPannelVMGroupFunction.m",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMGroupFunction.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Manager/GDImageMarkEditorManager.m",
+            "imports": [
+                {
+                    "line_no": 89,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMImageBoxProperty.h>"
+                },
+                {
+                    "line_no": 90,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMUnifyBackground+Guide.h>"
+                },
+                {
+                    "line_no": 92,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMPickerProperty.h>"
+                },
+                {
+                    "line_no": 134,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateCompressManager.h>"
+                },
+                {
+                    "line_no": 196,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMGroupFunction.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Manager/GDImageMarkEditorManager+GDMPannelVMImageBox.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMImageBoxProperty.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Manager/GDImageMarkEditorManager+Element.m",
+            "imports": [
+                {
+                    "line_no": 65,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMPickerProperty.h>"
+                },
+                {
+                    "line_no": 85,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateDataService.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Manager/GDImageMarkEditorManager.h",
+            "imports": [
+                {
+                    "line_no": 15,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Watermark/View/GDMWatermarkStyleView.m",
+            "imports": [
+                {
+                    "line_no": 24,
+                    "detail": "#import <GDImageTemplate/GDPickerColorView.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Text/view/GDMPTextColorPalettePopView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDCustomColorPicker.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Text/view/GDMPTextColorContentView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDPickerColorView.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Text/view/GDMPTextColorPannelPopView.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <GDImageTemplate/GDPickerColorView.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ViewController/GDImageEditorVC.h",
+            "imports": [
+                {
+                    "line_no": 12,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/ViewController/GDImageEditorVC.m",
+            "imports": [
+                {
+                    "line_no": 59,
+                    "detail": "#import <GDImageTemplate/GDEditorWorkRecordManager.h>"
+                },
+                {
+                    "line_no": 60,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                },
+                {
+                    "line_no": 61,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateContentModel.h>"
+                },
+                {
+                    "line_no": 62,
+                    "detail": "#import <GDImageTemplate/GDEditorWorkUploadManager.h>"
+                },
+                {
+                    "line_no": 63,
+                    "detail": "#import <GDImageTemplate/GDEditorWorkUploadDataProvider.h>"
+                },
+                {
+                    "line_no": 69,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateCache.h>"
+                },
+                {
+                    "line_no": 71,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateDataService.h>"
+                },
+                {
+                    "line_no": 74,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateWatermarkView.h>"
+                },
+                {
+                    "line_no": 80,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateCache.h>"
+                },
+                {
+                    "line_no": 86,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                },
+                {
+                    "line_no": 105,
+                    "detail": "#import <GDImageTemplate/GDMPannelVMImageBoxProperty.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Data/GDImageEditorDataManager.m",
+            "imports": [
+                {
+                    "line_no": 12,
+                    "detail": "#import <GDCollage/GDCollageLocalizable.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Data/GDImageMarkDataService.mm",
+            "imports": [
+                {
+                    "line_no": 28,
+                    "detail": "#import <GDImageTemplate/GDEditorWorkUploadManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Categories/GDBaseElement+Uploading.m",
+            "imports": [
+                {
+                    "line_no": 16,
+                    "detail": "#import <GDImageTemplate/GDImageBoxElement+Uploading.h>"
+                },
+                {
+                    "line_no": 17,
+                    "detail": "#import <GDImageTemplate/GDNinePatchElement+Uploading.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/NewImageEditor/Utility/GDEditorDataService.m",
+            "imports": [
+                {
+                    "line_no": 68,
+                    "detail": "#import <GDImageTemplate/GDImageTemplateModel.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/Utils/GDMElementUtil/GDMElementUtil.m",
+            "imports": [
+                {
+                    "line_no": 18,
+                    "detail": "#import <GDImageTemplate/GDMTemplateGlobal.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMEditTools/GDMEditTools/Classes/Font/FontManager.m",
+            "imports": [
+                {
+                    "line_no": 28,
+                    "detail": "#import <GDMVideoTemplateUI/GDFontRegister.h>"
+                }
+            ]
+        }
+    ]
+}

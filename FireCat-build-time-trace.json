@@ -1,0 +1,1354 @@
+{
+    "project_name": "FireCat",
+    "compile_duration": 3741.616,
+    "stage_details": {
+        "Total ExecuteCompiler": 3741.616,
+        "Total Frontend": 3264.908,
+        "Total Source": 2607.707,
+        "Total Module Load": 755.205,
+        "Total Module Compile": 108.666,
+        "Total Backend": 341.903
+    },
+    "top_ten": [
+        {
+            "module": "GDText",
+            "compile_duration": 909.085,
+            "stage_details": {
+                "Total ExecuteCompiler": 909.085,
+                "Total Frontend": 824.333,
+                "Total Source": 661.243,
+                "Total Module Load": 6.3,
+                "Total Module Compile": 6.225,
+                "Total Backend": 64.197
+            },
+            "top_ten": [
+                {
+                    "task": "hb-subset.o",
+                    "compile_duration": 19158.333,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 19.158,
+                        "Total Frontend": 12.122,
+                        "Total Source": 3.148,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 6.958
+                    }
+                },
+                {
+                    "task": "hb-ot-layout.o",
+                    "compile_duration": 13145.921,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 13.146,
+                        "Total Frontend": 9.273,
+                        "Total Source": 2.718,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 3.794
+                    }
+                },
+                {
+                    "task": "hb-subset-plan.o",
+                    "compile_duration": 12400.545,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 12.401,
+                        "Total Frontend": 9.003,
+                        "Total Source": 2.832,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 3.304
+                    }
+                },
+                {
+                    "task": "paragraph_txt.o",
+                    "compile_duration": 9239.07,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 9.239,
+                        "Total Frontend": 6.911,
+                        "Total Source": 3.548,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 2.247
+                    }
+                },
+                {
+                    "task": "hb-ot-face.o",
+                    "compile_duration": 7992.831,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.993,
+                        "Total Frontend": 7.632,
+                        "Total Source": 3.071,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.247
+                    }
+                },
+                {
+                    "task": "hb-aat-layout.o",
+                    "compile_duration": 7869.82,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.87,
+                        "Total Frontend": 6.491,
+                        "Total Source": 2.224,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 1.305
+                    }
+                },
+                {
+                    "task": "GDText-dummy.o",
+                    "compile_duration": 6500.07,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.5,
+                        "Total Frontend": 6.312,
+                        "Total Source": 6.303,
+                        "Total Module Load": 6.3,
+                        "Total Module Compile": 6.225,
+                        "Total Backend": 0.002
+                    }
+                },
+                {
+                    "task": "font_collection-ffb47dd415def1feff262d799da7f112.o",
+                    "compile_duration": 5815.998,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.816,
+                        "Total Frontend": 4.88,
+                        "Total Source": 2.732,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.888
+                    }
+                },
+                {
+                    "task": "hb-ot-shape-complex-arabic.o",
+                    "compile_duration": 5773.746,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.774,
+                        "Total Frontend": 4.77,
+                        "Total Source": 1.821,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.947
+                    }
+                },
+                {
+                    "task": "hb-ot-font.o",
+                    "compile_duration": 5447.203,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.447,
+                        "Total Frontend": 4.225,
+                        "Total Source": 1.753,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 1.171
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDMEditTools",
+            "compile_duration": 447.763,
+            "stage_details": {
+                "Total ExecuteCompiler": 447.763,
+                "Total Frontend": 377.473,
+                "Total Source": 295.365,
+                "Total Module Load": 66.415,
+                "Total Module Compile": 0.636,
+                "Total Backend": 50.225
+            },
+            "top_ten": [
+                {
+                    "task": "GlobalMatting.o",
+                    "compile_duration": 14623.127,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 14.623,
+                        "Total Frontend": 13.652,
+                        "Total Source": 12.007,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.722
+                    }
+                },
+                {
+                    "task": "UIImage+FilterBackgroundColor.o",
+                    "compile_duration": 14341.491,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 14.341,
+                        "Total Frontend": 13.548,
+                        "Total Source": 12.193,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.244
+                    }
+                },
+                {
+                    "task": "GDAutoMosaicChecker.o",
+                    "compile_duration": 12131.993,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 12.132,
+                        "Total Frontend": 11.302,
+                        "Total Source": 9.553,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.609
+                    }
+                },
+                {
+                    "task": "FCImageMattingView.o",
+                    "compile_duration": 11836.746,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 11.837,
+                        "Total Frontend": 11.337,
+                        "Total Source": 10.047,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.262
+                    }
+                },
+                {
+                    "task": "GDMRecord+WCTTableCoding.o",
+                    "compile_duration": 11397.904,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 11.398,
+                        "Total Frontend": 10.557,
+                        "Total Source": 8.307,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.623
+                    }
+                },
+                {
+                    "task": "GDImageEditor+AutoMosaic.o",
+                    "compile_duration": 10518.331,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 10.518,
+                        "Total Frontend": 10.0,
+                        "Total Source": 8.948,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.295
+                    }
+                },
+                {
+                    "task": "GDMEditorMarkListItem+WCTTableCoding.o",
+                    "compile_duration": 10156.541,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 10.157,
+                        "Total Frontend": 8.979,
+                        "Total Source": 6.957,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.991
+                    }
+                },
+                {
+                    "task": "GDImageMarkMaterialModel+WCTTableCoding.o",
+                    "compile_duration": 9659.979,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 9.66,
+                        "Total Frontend": 8.819,
+                        "Total Source": 7.084,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.676
+                    }
+                },
+                {
+                    "task": "GDImageMarkCategoryModel+WCTTableCoding.o",
+                    "compile_duration": 9555.726,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 9.556,
+                        "Total Frontend": 8.772,
+                        "Total Source": 6.981,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.615
+                    }
+                },
+                {
+                    "task": "GDMImageRecord+WCTTableCoding.o",
+                    "compile_duration": 9509.085,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 9.509,
+                        "Total Frontend": 8.688,
+                        "Total Source": 7.227,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.635
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDCanvasView",
+            "compile_duration": 380.089,
+            "stage_details": {
+                "Total ExecuteCompiler": 380.089,
+                "Total Frontend": 356.337,
+                "Total Source": 312.358,
+                "Total Module Load": 26.503,
+                "Total Module Compile": 18.57,
+                "Total Backend": 16.109
+            },
+            "top_ten": [
+                {
+                    "task": "platform_engine.o",
+                    "compile_duration": 10961.96,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 10.962,
+                        "Total Frontend": 8.554,
+                        "Total Source": 3.481,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 2.298
+                    }
+                },
+                {
+                    "task": "GDTextUtils.o",
+                    "compile_duration": 9284.284,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 9.284,
+                        "Total Frontend": 8.367,
+                        "Total Source": 6.552,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.754
+                    }
+                },
+                {
+                    "task": "GDFontInfo+CXX.o",
+                    "compile_duration": 7685.362,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.685,
+                        "Total Frontend": 7.51,
+                        "Total Source": 6.768,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.058
+                    }
+                },
+                {
+                    "task": "GDEffectFilling+CXX.o",
+                    "compile_duration": 7444.322,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.444,
+                        "Total Frontend": 6.884,
+                        "Total Source": 5.903,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.405
+                    }
+                },
+                {
+                    "task": "GDTextureView.o",
+                    "compile_duration": 6949.877,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.95,
+                        "Total Frontend": 6.627,
+                        "Total Source": 5.919,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.221
+                    }
+                },
+                {
+                    "task": "GDCanvasView-dummy.o",
+                    "compile_duration": 6926.215,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.926,
+                        "Total Frontend": 6.731,
+                        "Total Source": 6.723,
+                        "Total Module Load": 6.72,
+                        "Total Module Compile": 6.648,
+                        "Total Backend": 0.002
+                    }
+                },
+                {
+                    "task": "GDPlatformEngine.o",
+                    "compile_duration": 6785.072,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.785,
+                        "Total Frontend": 6.2,
+                        "Total Source": 5.093,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.441
+                    }
+                },
+                {
+                    "task": "ios_surface_software.o",
+                    "compile_duration": 6623.505,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.624,
+                        "Total Frontend": 6.331,
+                        "Total Source": 5.653,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.178
+                    }
+                },
+                {
+                    "task": "ios_surface_gl.o",
+                    "compile_duration": 6587.545,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.588,
+                        "Total Frontend": 6.382,
+                        "Total Source": 6.027,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.116
+                    }
+                },
+                {
+                    "task": "ios_surface_texture_gl.o",
+                    "compile_duration": 6480.839,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.481,
+                        "Total Frontend": 6.228,
+                        "Total Source": 5.746,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.122
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDMVideoEdit",
+            "compile_duration": 320.221,
+            "stage_details": {
+                "Total ExecuteCompiler": 320.221,
+                "Total Frontend": 265.76,
+                "Total Source": 214.418,
+                "Total Module Load": 60.306,
+                "Total Module Compile": 0.0,
+                "Total Backend": 38.278
+            },
+            "top_ten": [
+                {
+                    "task": "XMPlayerEngineManager.o",
+                    "compile_duration": 8841.457,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 8.841,
+                        "Total Frontend": 7.677,
+                        "Total Source": 7.442,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.89
+                    }
+                },
+                {
+                    "task": "XMPlayerInstructionManager.o",
+                    "compile_duration": 7273.225,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.273,
+                        "Total Frontend": 6.831,
+                        "Total Source": 6.686,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.301
+                    }
+                },
+                {
+                    "task": "XMPlayerElementManager.o",
+                    "compile_duration": 7121.125,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.121,
+                        "Total Frontend": 6.703,
+                        "Total Source": 6.6,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.198
+                    }
+                },
+                {
+                    "task": "GDVideoEditDataBaseModel+WCTTableCoding.o",
+                    "compile_duration": 6519.942,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.52,
+                        "Total Frontend": 5.742,
+                        "Total Source": 4.688,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.671
+                    }
+                },
+                {
+                    "task": "GDMVideoEditMaterialModel+WCTTableCoding.o",
+                    "compile_duration": 6162.666,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.163,
+                        "Total Frontend": 5.524,
+                        "Total Source": 4.595,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.523
+                    }
+                },
+                {
+                    "task": "GDMVideoEditCategoryModel+WCTTableCoding.o",
+                    "compile_duration": 6051.279,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.051,
+                        "Total Frontend": 5.448,
+                        "Total Source": 4.518,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.487
+                    }
+                },
+                {
+                    "task": "GDMVideoEditMaterialDetail+WCTTableCoding.o",
+                    "compile_duration": 6050.607,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.051,
+                        "Total Frontend": 5.475,
+                        "Total Source": 4.642,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.471
+                    }
+                },
+                {
+                    "task": "GDMAudioOnSetModel+WCTTableCoding.o",
+                    "compile_duration": 5588.543,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.589,
+                        "Total Frontend": 5.052,
+                        "Total Source": 4.322,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.43
+                    }
+                },
+                {
+                    "task": "GDMAssetPathCacheRecord+WCTTableCoding.o",
+                    "compile_duration": 5560.82,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.561,
+                        "Total Frontend": 5.084,
+                        "Total Source": 4.413,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.336
+                    }
+                },
+                {
+                    "task": "GDMVideoEditDataFilterManager.o",
+                    "compile_duration": 5556.011,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.556,
+                        "Total Frontend": 4.999,
+                        "Total Source": 4.639,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.447
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDMVideoTemplateUI",
+            "compile_duration": 204.314,
+            "stage_details": {
+                "Total ExecuteCompiler": 204.314,
+                "Total Frontend": 193.893,
+                "Total Source": 178.971,
+                "Total Module Load": 123.372,
+                "Total Module Compile": 13.85,
+                "Total Backend": 5.604
+            },
+            "top_ten": [
+                {
+                    "task": "GDTemplateCompositeSession.o",
+                    "compile_duration": 33392.342,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 33.392,
+                        "Total Frontend": 32.956,
+                        "Total Source": 28.305,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.0
+                    }
+                },
+                {
+                    "task": "GDFontRegister.o",
+                    "compile_duration": 11791.4,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 11.791,
+                        "Total Frontend": 11.524,
+                        "Total Source": 10.858,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.099
+                    }
+                },
+                {
+                    "task": "XVTemplateVideoContent.o",
+                    "compile_duration": 7866.759,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.867,
+                        "Total Frontend": 7.816,
+                        "Total Source": 7.795,
+                        "Total Module Load": 7.772,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.017
+                    }
+                },
+                {
+                    "task": "XVThumbButtonCollectionViewCell.o",
+                    "compile_duration": 7857.03,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.857,
+                        "Total Frontend": 7.821,
+                        "Total Source": 7.752,
+                        "Total Module Load": 7.709,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.014
+                    }
+                },
+                {
+                    "task": "XVTemplateToolBar.o",
+                    "compile_duration": 7651.269,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.651,
+                        "Total Frontend": 7.587,
+                        "Total Source": 7.438,
+                        "Total Module Load": 7.34,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.032
+                    }
+                },
+                {
+                    "task": "XVWatermarkConfig.o",
+                    "compile_duration": 7624.239,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.624,
+                        "Total Frontend": 7.544,
+                        "Total Source": 7.527,
+                        "Total Module Load": 7.33,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.046
+                    }
+                },
+                {
+                    "task": "XVTemplateSetting.o",
+                    "compile_duration": 7610.055,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.61,
+                        "Total Frontend": 7.559,
+                        "Total Source": 7.547,
+                        "Total Module Load": 7.486,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.02
+                    }
+                },
+                {
+                    "task": "XVVolumeSlider.o",
+                    "compile_duration": 7496.634,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.497,
+                        "Total Frontend": 7.466,
+                        "Total Source": 7.422,
+                        "Total Module Load": 7.327,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.008
+                    }
+                },
+                {
+                    "task": "GDTemplateThreadContext.o",
+                    "compile_duration": 7376.396,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.376,
+                        "Total Frontend": 7.273,
+                        "Total Source": 7.174,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.027
+                    }
+                },
+                {
+                    "task": "XVTemplateTextFrame.o",
+                    "compile_duration": 7329.54,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.33,
+                        "Total Frontend": 7.3,
+                        "Total Source": 7.283,
+                        "Total Module Load": 7.259,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.011
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDEditor",
+            "compile_duration": 203.895,
+            "stage_details": {
+                "Total ExecuteCompiler": 203.895,
+                "Total Frontend": 181.651,
+                "Total Source": 156.153,
+                "Total Module Load": 103.268,
+                "Total Module Compile": 12.775,
+                "Total Backend": 13.239
+            },
+            "top_ten": [
+                {
+                    "task": "UIImage+NinePatch.o",
+                    "compile_duration": 8384.457,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 8.384,
+                        "Total Frontend": 8.163,
+                        "Total Source": 8.129,
+                        "Total Module Load": 8.098,
+                        "Total Module Compile": 3.541,
+                        "Total Backend": 0.016
+                    }
+                },
+                {
+                    "task": "GDDraftInfo+WCTTableCoding.o",
+                    "compile_duration": 6866.96,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.867,
+                        "Total Frontend": 6.169,
+                        "Total Source": 4.956,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.485
+                    }
+                },
+                {
+                    "task": "GDDraftCache.o",
+                    "compile_duration": 5998.877,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.999,
+                        "Total Frontend": 5.598,
+                        "Total Source": 4.937,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.3
+                    }
+                },
+                {
+                    "task": "UIImage+GDQRCode.o",
+                    "compile_duration": 5400.74,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.401,
+                        "Total Frontend": 5.114,
+                        "Total Source": 5.036,
+                        "Total Module Load": 4.827,
+                        "Total Module Compile": 0.382,
+                        "Total Backend": 0.105
+                    }
+                },
+                {
+                    "task": "GDSVGUtil.o",
+                    "compile_duration": 5175.891,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.176,
+                        "Total Frontend": 4.884,
+                        "Total Source": 4.548,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.15
+                    }
+                },
+                {
+                    "task": "GDDraftManager.o",
+                    "compile_duration": 4908.735,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 4.909,
+                        "Total Frontend": 4.617,
+                        "Total Source": 4.455,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.106
+                    }
+                },
+                {
+                    "task": "UIImage+Transparent.o",
+                    "compile_duration": 4537.9,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 4.538,
+                        "Total Frontend": 4.516,
+                        "Total Source": 4.485,
+                        "Total Module Load": 4.48,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.006
+                    }
+                },
+                {
+                    "task": "UIFont+FittingSize.o",
+                    "compile_duration": 4534.058,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 4.534,
+                        "Total Frontend": 4.507,
+                        "Total Source": 4.488,
+                        "Total Module Load": 4.481,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.009
+                    }
+                },
+                {
+                    "task": "UIView+Transform.o",
+                    "compile_duration": 4465.906,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 4.466,
+                        "Total Frontend": 4.349,
+                        "Total Source": 4.335,
+                        "Total Module Load": 4.332,
+                        "Total Module Compile": 4.291,
+                        "Total Backend": 0.007
+                    }
+                },
+                {
+                    "task": "UIBezierPath+SVG.o",
+                    "compile_duration": 4104.333,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 4.104,
+                        "Total Frontend": 4.076,
+                        "Total Source": 4.057,
+                        "Total Module Load": 4.048,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.012
+                    }
+                }
+            ]
+        },
+        {
+            "module": "FlutterGlue",
+            "compile_duration": 179.612,
+            "stage_details": {
+                "Total ExecuteCompiler": 179.612,
+                "Total Frontend": 173.046,
+                "Total Source": 158.662,
+                "Total Module Load": 33.609,
+                "Total Module Compile": 33.077,
+                "Total Backend": 4.181
+            },
+            "top_ten": [
+                {
+                    "task": "GDTexture.o",
+                    "compile_duration": 21017.541,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 21.018,
+                        "Total Frontend": 20.758,
+                        "Total Source": 20.688,
+                        "Total Module Load": 20.651,
+                        "Total Module Compile": 20.361,
+                        "Total Backend": 0.01
+                    }
+                },
+                {
+                    "task": "DartMediaExportImpl.o",
+                    "compile_duration": 19346.714,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 19.347,
+                        "Total Frontend": 19.102,
+                        "Total Source": 16.687,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.0
+                    }
+                },
+                {
+                    "task": "PlatformHandleImpl.o",
+                    "compile_duration": 16152.816,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 16.153,
+                        "Total Frontend": 14.64,
+                        "Total Source": 11.138,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 1.073
+                    }
+                },
+                {
+                    "task": "FlutterGlue-dummy.o",
+                    "compile_duration": 13264.115,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 13.264,
+                        "Total Frontend": 13.03,
+                        "Total Source": 12.97,
+                        "Total Module Load": 12.957,
+                        "Total Module Compile": 12.716,
+                        "Total Backend": 0.003
+                    }
+                },
+                {
+                    "task": "FlutterGlue.o",
+                    "compile_duration": 11957.298,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 11.957,
+                        "Total Frontend": 11.73,
+                        "Total Source": 11.352,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.126
+                    }
+                },
+                {
+                    "task": "MethodCallHandlerImpl.o",
+                    "compile_duration": 10275.033,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 10.275,
+                        "Total Frontend": 10.123,
+                        "Total Source": 10.09,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.061
+                    }
+                },
+                {
+                    "task": "DartTextImpl.o",
+                    "compile_duration": 8162.539,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 8.163,
+                        "Total Frontend": 7.682,
+                        "Total Source": 6.622,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.4
+                    }
+                },
+                {
+                    "task": "DartLayerImpl.o",
+                    "compile_duration": 7052.476,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.052,
+                        "Total Frontend": 6.601,
+                        "Total Source": 5.58,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.389
+                    }
+                },
+                {
+                    "task": "DartMediaImpl.o",
+                    "compile_duration": 7015.37,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 7.015,
+                        "Total Frontend": 6.502,
+                        "Total Source": 5.419,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.434
+                    }
+                },
+                {
+                    "task": "DartTextEffectImpl.o",
+                    "compile_duration": 6760.094,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.76,
+                        "Total Frontend": 6.409,
+                        "Total Source": 5.773,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.272
+                    }
+                }
+            ]
+        },
+        {
+            "module": "FireCatApp",
+            "compile_duration": 171.794,
+            "stage_details": {
+                "Total ExecuteCompiler": 171.794,
+                "Total Frontend": 133.855,
+                "Total Source": 88.071,
+                "Total Module Load": 47.33,
+                "Total Module Compile": 0.375,
+                "Total Backend": 25.89
+            },
+            "top_ten": [
+                {
+                    "task": "GDWebBridgeShare.o",
+                    "compile_duration": 2570.989,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 2.571,
+                        "Total Frontend": 1.911,
+                        "Total Source": 1.275,
+                        "Total Module Load": 0.213,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.614
+                    }
+                },
+                {
+                    "task": "JSExportHandler+GDMWebAndRNShare.o",
+                    "compile_duration": 2550.535,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 2.551,
+                        "Total Frontend": 1.754,
+                        "Total Source": 0.995,
+                        "Total Module Load": 0.189,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.749
+                    }
+                },
+                {
+                    "task": "RouterHelper+JumpDetail.o",
+                    "compile_duration": 2116.392,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 2.116,
+                        "Total Frontend": 1.745,
+                        "Total Source": 1.239,
+                        "Total Module Load": 0.204,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.302
+                    }
+                },
+                {
+                    "task": "FCShareToolView.o",
+                    "compile_duration": 1737.561,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.738,
+                        "Total Frontend": 1.413,
+                        "Total Source": 1.041,
+                        "Total Module Load": 0.199,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.284
+                    }
+                },
+                {
+                    "task": "GDChannelProtocolMediator.o",
+                    "compile_duration": 1655.237,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.655,
+                        "Total Frontend": 1.337,
+                        "Total Source": 1.011,
+                        "Total Module Load": 0.188,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.259
+                    }
+                },
+                {
+                    "task": "GDUserCenterVC.o",
+                    "compile_duration": 1642.361,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.642,
+                        "Total Frontend": 1.063,
+                        "Total Source": 0.846,
+                        "Total Module Load": 0.386,
+                        "Total Module Compile": 0.141,
+                        "Total Backend": 0.174
+                    }
+                },
+                {
+                    "task": "FCUniformShareVC.o",
+                    "compile_duration": 1585.842,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.586,
+                        "Total Frontend": 1.351,
+                        "Total Source": 1.047,
+                        "Total Module Load": 0.242,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.192
+                    }
+                },
+                {
+                    "task": "GDEditFinishPageManager.o",
+                    "compile_duration": 1560.965,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.561,
+                        "Total Frontend": 1.364,
+                        "Total Source": 1.142,
+                        "Total Module Load": 0.207,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.154
+                    }
+                },
+                {
+                    "task": "GDEditFinishPageBaseVC.o",
+                    "compile_duration": 1414.601,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.415,
+                        "Total Frontend": 1.162,
+                        "Total Source": 0.844,
+                        "Total Module Load": 0.278,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.209
+                    }
+                },
+                {
+                    "task": "GDMarketingPreViewController.o",
+                    "compile_duration": 1347.647,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.348,
+                        "Total Frontend": 1.058,
+                        "Total Source": 0.81,
+                        "Total Module Load": 0.193,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.233
+                    }
+                }
+            ]
+        },
+        {
+            "module": "GDImageTemplate",
+            "compile_duration": 64.47,
+            "stage_details": {
+                "Total ExecuteCompiler": 64.47,
+                "Total Frontend": 55.36,
+                "Total Source": 44.756,
+                "Total Module Load": 5.813,
+                "Total Module Compile": 0.0,
+                "Total Backend": 6.789
+            },
+            "top_ten": [
+                {
+                    "task": "GDImageTemplateExportManager+Filter.o",
+                    "compile_duration": 6732.178,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.732,
+                        "Total Frontend": 6.589,
+                        "Total Source": 6.536,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.028
+                    }
+                },
+                {
+                    "task": "GDEditorWorkRecordTask.o",
+                    "compile_duration": 6422.216,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 6.422,
+                        "Total Frontend": 5.596,
+                        "Total Source": 4.371,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.729
+                    }
+                },
+                {
+                    "task": "GDEditorWorkUploadRecord.o",
+                    "compile_duration": 5790.779,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.791,
+                        "Total Frontend": 5.245,
+                        "Total Source": 4.397,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.437
+                    }
+                },
+                {
+                    "task": "GDEditorWorkResourceUploadRecord.o",
+                    "compile_duration": 5704.5,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.705,
+                        "Total Frontend": 5.17,
+                        "Total Source": 4.332,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.413
+                    }
+                },
+                {
+                    "task": "GDEditorWorkRecordManager.o",
+                    "compile_duration": 5286.993,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.287,
+                        "Total Frontend": 4.933,
+                        "Total Source": 4.537,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.203
+                    }
+                },
+                {
+                    "task": "GDEditorWorkRecordUnfinished.o",
+                    "compile_duration": 5111.553,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 5.112,
+                        "Total Frontend": 4.833,
+                        "Total Source": 4.445,
+                        "Total Module Load": 0.0,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.114
+                    }
+                },
+                {
+                    "task": "GDImageTemplateEditorVC.o",
+                    "compile_duration": 3407.609,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 3.408,
+                        "Total Frontend": 2.461,
+                        "Total Source": 1.659,
+                        "Total Module Load": 0.218,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.871
+                    }
+                },
+                {
+                    "task": "GDImageTemplateManager.o",
+                    "compile_duration": 1528.879,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.529,
+                        "Total Frontend": 1.306,
+                        "Total Source": 1.079,
+                        "Total Module Load": 0.166,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.183
+                    }
+                },
+                {
+                    "task": "GDImageTemplateDataService.o",
+                    "compile_duration": 1289.702,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.29,
+                        "Total Frontend": 0.923,
+                        "Total Source": 0.626,
+                        "Total Module Load": 0.199,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.315
+                    }
+                },
+                {
+                    "task": "GDImageTemplateExportManager.o",
+                    "compile_duration": 1091.111,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.091,
+                        "Total Frontend": 0.903,
+                        "Total Source": 0.723,
+                        "Total Module Load": 0.148,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.146
+                    }
+                }
+            ]
+        },
+        {
+            "module": "YYKit",
+            "compile_duration": 48.418,
+            "stage_details": {
+                "Total ExecuteCompiler": 48.418,
+                "Total Frontend": 34.89,
+                "Total Source": 19.193,
+                "Total Module Load": 10.405,
+                "Total Module Compile": 0.0,
+                "Total Backend": 12.566
+            },
+            "top_ten": [
+                {
+                    "task": "YYTextView.o",
+                    "compile_duration": 2916.441,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 2.916,
+                        "Total Frontend": 1.645,
+                        "Total Source": 0.572,
+                        "Total Module Load": 0.123,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 1.224
+                    }
+                },
+                {
+                    "task": "YYTextLayout.o",
+                    "compile_duration": 2367.2,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 2.367,
+                        "Total Frontend": 1.309,
+                        "Total Source": 0.406,
+                        "Total Module Load": 0.109,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 1.024
+                    }
+                },
+                {
+                    "task": "YYImageCoder.o",
+                    "compile_duration": 1744.933,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.745,
+                        "Total Frontend": 1.031,
+                        "Total Source": 0.326,
+                        "Total Module Load": 0.164,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.701
+                    }
+                },
+                {
+                    "task": "NSAttributedString+YYText.o",
+                    "compile_duration": 1460.598,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.461,
+                        "Total Frontend": 0.889,
+                        "Total Source": 0.335,
+                        "Total Module Load": 0.122,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.561
+                    }
+                },
+                {
+                    "task": "YYLabel.o",
+                    "compile_duration": 1401.526,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.402,
+                        "Total Frontend": 0.851,
+                        "Total Source": 0.411,
+                        "Total Module Load": 0.109,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.525
+                    }
+                },
+                {
+                    "task": "NSObject+YYModel.o",
+                    "compile_duration": 1291.887,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 1.292,
+                        "Total Frontend": 0.591,
+                        "Total Source": 0.144,
+                        "Total Module Load": 0.121,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.692
+                    }
+                },
+                {
+                    "task": "YYWebImageOperation.o",
+                    "compile_duration": 990.872,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 0.991,
+                        "Total Frontend": 0.677,
+                        "Total Source": 0.369,
+                        "Total Module Load": 0.108,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.3
+                    }
+                },
+                {
+                    "task": "YYAnimatedImageView.o",
+                    "compile_duration": 965.31,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 0.965,
+                        "Total Frontend": 0.732,
+                        "Total Source": 0.377,
+                        "Total Module Load": 0.14,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.213
+                    }
+                },
+                {
+                    "task": "YYTextParser.o",
+                    "compile_duration": 889.17,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 0.889,
+                        "Total Frontend": 0.601,
+                        "Total Source": 0.317,
+                        "Total Module Load": 0.151,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.258
+                    }
+                },
+                {
+                    "task": "YYTextAttribute.o",
+                    "compile_duration": 848.888,
+                    "stage_details": {
+                        "Total ExecuteCompiler": 0.849,
+                        "Total Frontend": 0.566,
+                        "Total Source": 0.261,
+                        "Total Module Load": 0.108,
+                        "Total Module Compile": 0.0,
+                        "Total Backend": 0.274
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "missing_dependencies": [
+        "Kiwi"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/FireCat/FireCat/UnitTest/RouterHelperSpec.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <Kiwi/Kiwi.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/FireCat/FireCat/UnitTest/AppDelegateSpec.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <Kiwi/Kiwi.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/FireCat/FireCat/UnitTest/APNSHelperTestSpec.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <Kiwi/Kiwi.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/FireCat/FireCat/UnitTest/FireCatProtocolSpec.m",
+            "imports": [
+                {
+                    "line_no": 9,
+                    "detail": "#import <Kiwi/Kiwi.h>"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "missing_dependencies": [
+        "GDImageTemplate",
+        "GDMVideoTemplateUI"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/Music/XVTemplateBackgroundMusicSelectView.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDMVideoTemplateUI/XVLocalMusicModel.h>"
+                },
+                {
+                    "line_no": 16,
+                    "detail": "#import <GDMVideoTemplateUI/XVTemplateReformer.h>"
+                },
+                {
+                    "line_no": 21,
+                    "detail": "#import <GDMVideoTemplateUI/GDMVideoTemplateUILocalizable.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/Music/XVTemplateMusicSelectView.m",
+            "imports": [
+                {
+                    "line_no": 18,
+                    "detail": "#import <GDMVideoTemplateUI/XVTemplateReformer.h>"
+                },
+                {
+                    "line_no": 23,
+                    "detail": "#import <GDMVideoTemplateUI/GDMVideoTemplateUILocalizable.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/SDK/VideoTemplateManager.m",
+            "imports": [
+                {
+                    "line_no": 26,
+                    "detail": "#import <GDMVideoTemplateUI/GDFontRegister.h>"
+                },
+                {
+                    "line_no": 27,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateTargetHelper.h>"
+                },
+                {
+                    "line_no": 28,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateEffectPreviewView.h>"
+                },
+                {
+                    "line_no": 29,
+                    "detail": "#import <GDMVideoTemplateUI/FCTemplateEditViewController.h>"
+                },
+                {
+                    "line_no": 30,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateEffectViewController.h>"
+                },
+                {
+                    "line_no": 31,
+                    "detail": "#import <GDMVideoTemplateUI/XVTemplateChangeCoverViewController.h>"
+                },
+                {
+                    "line_no": 32,
+                    "detail": "#import <GDMVideoTemplateUI/GDMVideoTemplateUILocalizable.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/SDK/VideoTemplateManager.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDMVideoTemplateUI/XVTemplateReformer.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/SDK/GDVideoTemplateManager.m",
+            "imports": [
+                {
+                    "line_no": 12,
+                    "detail": "#import <GDMVideoTemplateUI/GDFontRegister.h>"
+                },
+                {
+                    "line_no": 29,
+                    "detail": "#import <GDMVideoTemplateUI/GDMVideoTemplateUILocalizable.h>"
+                },
+                {
+                    "line_no": 30,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateWatermarkProtocol.h>"
+                },
+                {
+                    "line_no": 31,
+                    "detail": "#import <GDMVideoTemplateUI/FCTemplateEditViewController.h>"
+                },
+                {
+                    "line_no": 32,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateTargetHelper.h>"
+                },
+                {
+                    "line_no": 33,
+                    "detail": "#import <GDMVideoTemplateUI/XVTemplateReformer.h>"
+                },
+                {
+                    "line_no": 34,
+                    "detail": "#import <GDMVideoTemplateUI/GDTemplateEffectViewController.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMVideoTemplate/GDMVideoTemplate/Classes/SDK/Models/GDVideoTemplateDetailModel.m",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDImageTemplate/GDWorkShopImageTemplateRequestModel.h>"
+                }
+            ]
+        }
+    ]
+}

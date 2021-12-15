@@ -14,7 +14,7 @@ class File(Build):
     解析单个文件 build 数据
     """
     @classmethod
-    def from_build(self, json_file: str) -> Build:
+    def from_file(self, json_file: str) -> Build:
         """
         从 json 文件初始化
         """
@@ -37,13 +37,14 @@ class File(Build):
     @cached_property
     def json_object(self) -> dict:
 
-        trace_events = {
+        stage_details = {
             stages[field.name]: round(getattr(self, field.name) / 1000.0, 3) 
             for field in fields(Build) if field.name in stages
         }
         return {
-            "build_file": self.context,
-            "trace_events": trace_events
+            "task": self.context,
+            "compile_duration": self.total_execute_compiler,
+            "stage_details": stage_details
         }
 
 @dataclass
@@ -52,7 +53,7 @@ class Target(Build):
     统计 target 下所有文件 build 数据
     """
     @classmethod
-    def from_build(self, target_dir: str) -> Build:
+    def from_dir(self, target_dir: str) -> Build:
         """
         提取 target 目录所有 json
         """
@@ -61,7 +62,7 @@ class Target(Build):
             for file in files:
                 
                 if not file.endswith(".json"): continue
-                leaf = File.from_build(os.path.join(root, file))
+                leaf = File.from_file(os.path.join(root, file))
                 dependencies.append(leaf)
 
         def fuction(acc: dict, x: Build) -> dict:
@@ -79,7 +80,7 @@ class Target(Build):
         return Target(**kwargs)
 
     @cached_property
-    def top_10_builds(self) -> list[Build]:
+    def top_ten(self) -> list[Build]:
         """
         耗时前 10 的源文件
         """
@@ -91,15 +92,16 @@ class Target(Build):
     @cached_property
     def json_object(self) -> dict:
 
-        trace_events = {
+        stage_details = {
             stages[field.name]: getattr(self, field.name) 
             for field in fields(Build) if field.name in stages
         }
         return {
-            "build_target": self.context,
-            "trace_events": trace_events,
-            "top_10_builds": [
-                x.json_object for x in self.top_10_builds
+            "module": self.context,
+            "compile_duration": self.total_execute_compiler,
+            "stage_details": stage_details,
+            "top_ten": [
+                x.json_object for x in self.top_ten
             ],
         }    
 
@@ -109,7 +111,7 @@ class Pods(Build):
     汇总 Pods 目录下所有 target
     """
     @classmethod
-    def from_build(self, project: str):
+    def from_scheme(self, project: str):
         """
         获取 project 下所有构建数据
         """
@@ -126,7 +128,7 @@ class Pods(Build):
             if not path.endswith(".build") or path.startswith("Pods."):
                 continue
 
-            target = Target.from_build(os.path.join(project_dir, path))
+            target = Target.from_dir(os.path.join(project_dir, path))
             dependencies.append(target)  
 
         def fuction(acc: dict, x: Build) -> dict:
@@ -146,7 +148,7 @@ class Pods(Build):
         return Pods(**kwargs)
 
     @cached_property
-    def top_10_builds(self) -> list[Build]:
+    def top_ten(self) -> list[Build]:
         """
         耗时前 10 的 target
         """
@@ -157,12 +159,13 @@ class Pods(Build):
     @cached_property
     def json_object(self) -> dict:
         
-        trace_events = {
+        stage_details = {
             stages[field.name]: getattr(self, field.name) 
             for field in fields(Build) if field.name in stages
         }
         return {
-            "build_project": self.context,
-            "trace_events": trace_events,
-            "top_10_builds": [x.json_object for x in self.top_10_builds],
+            "project_name": self.context,
+            "compile_duration": self.total_execute_compiler,
+            "stage_details": stage_details,
+            "top_ten": [x.json_object for x in self.top_ten],
         }

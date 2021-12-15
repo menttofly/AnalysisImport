@@ -1,0 +1,71 @@
+{
+    "missing_dependencies": [
+        "GDMModel",
+        "GDImageLoader"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/DingTalk/GDDingTalkContent.m",
+            "imports": [
+                {
+                    "line_no": 11,
+                    "detail": "#import <GDImageLoader/GDImageLoader.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/WeChat/GDShareWeChat.m",
+            "imports": [
+                {
+                    "line_no": 25,
+                    "detail": "#import <GDMModel/GDProgressIndicator.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/WeChat/GDWeChatContent.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDImageLoader/GDImageLoader.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/Weibo/GDShareWeibo.m",
+            "imports": [
+                {
+                    "line_no": 22,
+                    "detail": "#import <GDMModel/GDProgressIndicator.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/Weibo/GDWeiboAuthViewController.m",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDMModel/GDProgressIndicator.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/Weibo/GDWeiboContent.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDImageLoader/GDImageLoader.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDShare/Domestic/QQ/GDQQContent.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDImageLoader/GDImageLoader.h>"
+                }
+            ]
+        }
+    ]
+}

@@ -15,7 +15,7 @@ class ModulePlugin(Plugin):
         self.sanbox = sanbox
 
     def process(self, pod: str, input_file: str):
-        if input_file.endswith(".mm") or input_file.endswith(".h"): 
+        if input_file.endswith(".mm") or input_file.endswith(".h") or input_file.endswith(".hpp"): 
             # .mm 不支持 module，.h 依赖声明缺失会导致 @import 报错：could not find module
             return
 

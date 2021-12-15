@@ -1,0 +1,79 @@
+{
+    "missing_dependencies": [
+        "GDEditorFoundation"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/ThirdLibs/MJPhotoBrowser/MJPhotoBrowser.m",
+            "imports": [
+                {
+                    "line_no": 14,
+                    "detail": "#import <GDEditorFoundation/Picture.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/BaseCacheService/Category/BaseCacheService+Lib.m",
+            "imports": [
+                {
+                    "line_no": 17,
+                    "detail": "#import <GDEditorFoundation/MarkStyle.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/BaseCacheService/CacheService/MusicCacheService.h",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDEditorFoundation/Material.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/BaseCacheService/CacheService/BaseCacheService.m",
+            "imports": [
+                {
+                    "line_no": 22,
+                    "detail": "#import <GDEditorFoundation/MarkStyle.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/BaseCacheService/CacheService/MusicCacheService.m",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDEditorFoundation/MusicContent.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/BaseCacheService/CacheService/BaseCacheService.h",
+            "imports": [
+                {
+                    "line_no": 11,
+                    "detail": "#import <GDEditorFoundation/CacheExtral.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/Model/VideoTemplateModel.m",
+            "imports": [
+                {
+                    "line_no": 10,
+                    "detail": "#import <GDEditorFoundation/SceneTemplatePreviewInfo.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDMModel/GDMModel/Classes/WebviewConfig/MyWebConfig+Mark.h",
+            "imports": [
+                {
+                    "line_no": 12,
+                    "detail": "#import <GDEditorFoundation/MarkStyle.h>"
+                }
+            ]
+        }
+    ]
+}

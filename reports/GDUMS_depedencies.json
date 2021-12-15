@@ -1,0 +1,43 @@
+{
+    "missing_dependencies": [
+        "GDApp"
+    ],
+    "file_import_details": [
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDUMS/Domestic/Handlers/WeChat/GDUMSWeChatLoginHandler.m",
+            "imports": [
+                {
+                    "line_no": 16,
+                    "detail": "#import <GDApp/GDAppManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDUMS/Domestic/Handlers/QQ/GDUMSQQLoginHandler.m",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDApp/GDAppManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDUMS/Foreign/Handlers/Google/GDUMSGoogleLoginHandler.m",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDApp/GDAppManager.h>"
+                }
+            ]
+        },
+        {
+            "file": "/Users/menttofly/Desktop/Gaoding-iOS/modules/GDUMS/Foreign/Handlers/Facebook/GDUMSFacebookLoginHandler.m",
+            "imports": [
+                {
+                    "line_no": 13,
+                    "detail": "#import <GDApp/GDAppManager.h>"
+                }
+            ]
+        }
+    ]
+}
